@@ -14,7 +14,22 @@
 
 ## Introducton
 
+Tesseract was originally developed at Hewlett-Packard Laboratories Bristol and at Hewlett-Packard Co, Greeley Colorado between 1985 and 1994, with some more changes made in 1996 to port to Windows, and some C++izing in 1998. In 2005 Tesseract was open sourced by HP. From 2006 until November 2018 it was developed by Google.
+
+Strength
+- Extremely high accuracy in recognizing a majority of printed fonts
+- Various line segmentation & Recognition mode
+- High Generalizability
+- Tesseract comes with a python wrapper class called Pytesseract [https://pypi.org/project/pytesseract/]
+- Support training
+
+Weakness
+- extremely tenuous training process (using shell scripts), nearly inable to train
+- Inable to recognize cursive fonts, accuracy changes correspondent with cursiveness. 
+
 ## Data & Accuracy
+
+
 
 # Kraken
 
