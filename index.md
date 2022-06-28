@@ -1,6 +1,6 @@
 ## Welcome to Our Data+ Project: AI-powered Historical Text Transcription
 
-The Rubenstein Library holds millions of pages of handwritten documents ranging from ancient Papyri to records of Southern plantations to 21st century letters and diaries. Only a small subset of these documents have been digitized and made available online, and even fewer have been transcribed. The lack of text transcripts for handwritten documents impairs discovery and use of the materials, and prohibits any kind of computational text analysis that might support new avenues of research, including research related to the histories of racial injustice.
+  The Rubenstein Library holds millions of pages of handwritten documents ranging from ancient Papyri to records of Southern plantations to 21st century letters and diaries. Only a small subset of these documents have been digitized and made available online, and even fewer have been transcribed. The lack of text transcripts for handwritten documents impairs discovery and use of the materials, and prohibits any kind of computational text analysis that might support new avenues of research, including research related to the histories of racial injustice.
 While Optical Character Recognition (OCR) technology has made it possible to derive machine-readable text from typewritten documents in an automated way for several decades, the work of transcribing handwritten documents remains largely manual and labor-intensive. In the last few years, however, platforms like Transkribus have sought to harness the power of machine-learning by using Handwriting Text Recognition (HTR) to extract text from manuscripts and other handwritten documents held in libraries and archives. To date, the Rubenstein Library has conducted a few small-scale HTR experiments with mixed (and mostly disappointing) results. We have a lot to learn about the viability of HTR for our collections and about how to incorporate HTR into our existing workflows.
 In this Data+ project, students will test the viability of AI-powered HTR for transcribing digitized handwritten documents in the Rubenstein library and make recommendations for how the library might incorporate HTR into existing workflows, projects, and interfaces. Source material will be drawn from the Duke Digital Collections and will initially focus on a subset of digitized 19th-20th century women’s travel diaries, but could also include yet-to-be digitized materials related to the early history of Duke such as sermons, diaries, and lecture notes of our institution’s first president, Braxton Craven. As we approach Duke’s centennial, HTR-generated transcripts of the Craven materials would help support the university’s ongoing investigation into its institutional connection to slavery.
 
@@ -8,17 +8,21 @@ In this Data+ project, students will test the viability of AI-powered HTR for tr
 
 # Transkribus
 
-## Introducton
+### Introducton
 
+[(https://readcoop.eu/transkribus/?sc=Transkribus)]
 
 
 Strength
+- extremely high accuracy in cursive hand written text recognition
+- commercial product with mature software available
 
 Weakness
+- Low generalizability
+- Not open-sourced, not replicable
 
 
-
-## Data & Accuracy
+### DataSet & Accuracy
 
 |Training Set| Bentham Project |
 |Testing Set | Women Traveling Diaries | 
@@ -29,7 +33,7 @@ Weakness
 
 ## Introducton
 
-Tesseract was originally developed at Hewlett-Packard Laboratories Bristol and at Hewlett-Packard Co, Greeley Colorado between 1985 and 1994, with some more changes made in 1996 to port to Windows, and some C++izing in 1998. In 2005 Tesseract was open sourced by HP. From 2006 until November 2018 it was developed by Google.
+  Tesseract was originally developed at Hewlett-Packard Laboratories Bristol and at Hewlett-Packard Co, Greeley Colorado between 1985 and 1994, with some more changes made in 1996 to port to Windows, and some C++izing in 1998. In 2005 Tesseract was open sourced by HP. From 2006 until November 2018 it was developed by Google.
 
 Strength
 - Extremely high accuracy in recognizing a majority of printed fonts
@@ -42,7 +46,12 @@ Weakness
 - extremely tenuous training process (using shell scripts), nearly inable to train
 - Inable to recognize cursive fonts, accuracy changes correspondent with cursiveness. 
 
-## Data & Accuracy
+## DataSet & Accuracy
+
+|Training Set|.|
+|Testing Set| |
+
+
 
 | Font type | Author | Accuracy |
 | --------- | ------ | -------- |
@@ -59,7 +68,7 @@ image
 
 ## Introducton
 
-## Data & Accuracy
+## DataSet & Accuracy
 
 # Google Cloud AI
 
