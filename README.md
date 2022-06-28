@@ -1,6 +1,8 @@
-# AI-powered-Historical-Test-Transcription
+# AI-powered Historical Test Transcription
 
 ## Tesseract
+
+
 
 ## Kraken 
 
