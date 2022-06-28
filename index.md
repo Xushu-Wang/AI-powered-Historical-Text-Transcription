@@ -1,12 +1,27 @@
 ## Welcome to Our Data+ Project: AI-powered Historical Text Transcription
 
+The Rubenstein Library holds millions of pages of handwritten documents ranging from ancient Papyri to records of Southern plantations to 21st century letters and diaries. Only a small subset of these documents have been digitized and made available online, and even fewer have been transcribed. The lack of text transcripts for handwritten documents impairs discovery and use of the materials, and prohibits any kind of computational text analysis that might support new avenues of research, including research related to the histories of racial injustice.
+While Optical Character Recognition (OCR) technology has made it possible to derive machine-readable text from typewritten documents in an automated way for several decades, the work of transcribing handwritten documents remains largely manual and labor-intensive. In the last few years, however, platforms like Transkribus have sought to harness the power of machine-learning by using Handwriting Text Recognition (HTR) to extract text from manuscripts and other handwritten documents held in libraries and archives. To date, the Rubenstein Library has conducted a few small-scale HTR experiments with mixed (and mostly disappointing) results. We have a lot to learn about the viability of HTR for our collections and about how to incorporate HTR into our existing workflows.
+In this Data+ project, students will test the viability of AI-powered HTR for transcribing digitized handwritten documents in the Rubenstein library and make recommendations for how the library might incorporate HTR into existing workflows, projects, and interfaces. Source material will be drawn from the Duke Digital Collections and will initially focus on a subset of digitized 19th-20th century women’s travel diaries, but could also include yet-to-be digitized materials related to the early history of Duke such as sermons, diaries, and lecture notes of our institution’s first president, Braxton Craven. As we approach Duke’s centennial, HTR-generated transcripts of the Craven materials would help support the university’s ongoing investigation into its institutional connection to slavery.
+
 
 
 # Transkribus
 
 ## Introducton
 
+
+
+Strength
+
+Weakness
+
+
+
 ## Data & Accuracy
+
+|Training Set| Bentham Project |
+|Testing Set | Women Traveling Diaries | 
 
 ## Link
 
@@ -20,7 +35,7 @@ Strength
 - Extremely high accuracy in recognizing a majority of printed fonts
 - Various line segmentation & Recognition mode
 - High Generalizability
-- Tesseract comes with a python wrapper class called Pytesseract [https://pypi.org/project/pytesseract/]
+- Tesseract comes with a python wrapper class called Pytesseract [(https://pypi.org/project/pytesseract/)]
 - Support training
 
 Weakness
@@ -29,7 +44,16 @@ Weakness
 
 ## Data & Accuracy
 
+| Font type | Author | Accuracy |
+| --------- | ------ | -------- |
+| Non-cursive | N/A  | 98% |
+| Cursive | N/A | 10% |
+| Cursive | Crawford, Martha | 10% |
+| Cursive | McMillan, Mary | 10% |
+| Cursive | Harriet, Sanderson | 10% |
 
+
+image
 
 # Kraken
 
@@ -42,6 +66,11 @@ Weakness
 ## Introducton
 
 ## Data & Accuracy
+
+
+
+
+
 
 You can use the [editor on GitHub](https://github.com/Xushu-Wang/AI-powered-Historical-Test-Transcription/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
