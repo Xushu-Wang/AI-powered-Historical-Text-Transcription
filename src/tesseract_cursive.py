@@ -1,5 +1,5 @@
 #Graphing packages
-from PIL import Image
+from PIL import Image, ImageOps, ImageEnhance
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -47,6 +47,23 @@ def remove_noise3(image):
 #Preprocessing - thresholding
 def thresholding(image):
     return cv2.adaptiveThreshold(image, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 15, 9)
+
+
+# Alternative image processing by increasing contrast
+#------------------------------
+#image = Image.open("img.jpg")
+
+#if image.mode == 'RGBA':
+    r,g,b,a = image.split()
+    image = Image.merge('RGB', (r,g,b))
+
+#image = ImageOps.invert(image)
+
+#contrast = ImageEnhance.Color(image)
+#image = contrast.enhance(2)
+#---------------------------------
+
+
 
 
 #import images
@@ -175,9 +192,9 @@ plt.bar(ind + 0.15, wer, width, label='war')
 plt.bar(ind + 0.15 + width, distance, width, label='levenstein distance')
 
 plt.xlabel('Author', font = "DejaVu Sans", fontsize = 14, labelpad = 15
-                                                                ,color = '#333333')
-plt.ylabel('Accuracy (%)', font = "DejaVu Sans", fontsize = 14, labelpad = 15,
-                                                                color = '#333333')
+            ,color = '#333333')
+plt.ylabel('Accuracy (%)', font = "DejaVu Sans", fontsize = 14, labelpad = 15
+            ,color = '#333333')
 plt.title('Tesseract Accuracy (Comparing Different Authors)', fontsize = 18, font = "DejaVu Sans",loc = "center", 
           color = 'black', pad = 15, weight = "bold")
 

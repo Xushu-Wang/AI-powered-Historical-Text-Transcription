@@ -1,13 +1,16 @@
+## Adapted from Arabic Handwriting project, availabe from tesseract training doc in github
+
+# Make directory
 mkdir -p ~/CursiveHandwriting
 cd ~/CursiveHandwriting
 
 # Get the data.
-curl -L https://bl.oar.bl.uk/fail_uploads/download_file?fileset_id=e03280ef-5a75-4193-a8b5-1265f295e5cf >RASM2019_part_1.zip
-curl -L https://bl.oar.bl.uk/fail_uploads/download_file?fileset_id=907b2e2a-3f23-49b8-8eef-f073c8bb97ab >RASM2019_part_2.zip
+curl -L datadir >Cursive_part_1
+curl -L datadir >Cursive_part_2
 
-# Extract the data. Use 7za instead of unzip because there is an error in RASM2019_part_2.zip.
-7za x RASM2019_part_1.zip
-7za x RASM2019_part_2.zip
+# Extract the data. 
+7za x Cursive_part_1
+7za x Cursive_part_2
 mkdir -p IMG PAGE
 mv *.tif IMG
 mv *.xml PAGE
@@ -51,7 +54,7 @@ rm -v $(file *png|grep ", ... x ....,"|sed s/:.*//)
 
 
 # Create box files needed for Tesseract training.
-for t in ~/ArabicHandwriting/GT/LINES/*.txt; do test -f ${t/gt.txt/box} || (echo $t && ./generate_wordstr_box.py -i ${t/gt.txt/bin.png} -t $t -r >${t/gt.txt/box}); done 
+for t in ~/CursiveHandwriting/GT/LINES/*.txt; do test -f ${t/gt.txt/box} || (echo $t && ./generate_wordstr_box.py -i ${t/gt.txt/bin.png} -t $t -r >${t/gt.txt/box}); done 
 
-nohup make LANG_TYPE=RTL MODEL_NAME=ArabicHandwritingOCRD GROUND_TRUTH_DIR=/home/stweil/src/ArabicHandwriting/GT/LINES PSM=13 START_MODEL=Arabic TESSDATA=/home/stweil/src/github/OCR-D/venv-20200408/share/tessdata EPOCHS=20 lists >>data/ArabicHandwritingOCRD.log
-nohup make LANG_TYPE=RTL MODEL_NAME=ArabicHandwritingOCRD GROUND_TRUTH_DIR=/home/stweil/src/ArabicHandwriting/GT/LINES PSM=13 START_MODEL=Arabic TESSDATA=/home/stweil/src/github/OCR-D/venv-20200408/share/tessdata EPOCHS=20 training >>data/ArabicHandwritingOCRD.log
+nohup make LANG_TYPE=eng MODEL_NAME=CursiveHandwriting GROUND_TRUTH_DIR=/home/stweil/src/ArabicHandwriting/GT/LINES PSM=6 START_MODEL=eng TESSDATA=datadir EPOCHS=20 lists >>data/ArabicHandwritingOCRD.log
+nohup make LANG_TYPE=eng MODEL_NAME=CursiveHandwriting GROUND_TRUTH_DIR=/home/stweil/src/ArabicHandwriting/GT/LINES PSM=6 START_MODEL=eng TESSDATA=/home/stweil/src/github/OCR-D/venv-20200408/share/tessdata EPOCHS=20 training >>data/ArabicHandwritingOCRD.log

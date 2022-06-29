@@ -39,3 +39,4 @@ print(result_after)
 print("CER: ", cer(result_after, ground_truth))
 print("WER: ", wer(result_after, ground_truth))
 print("levenshtein distance: ", fuzz.ratio(result_after, ground_truth))
+
