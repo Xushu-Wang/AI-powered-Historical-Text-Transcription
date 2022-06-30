@@ -74,6 +74,9 @@ for suggestion in suggestions:
 
 
 ## Four Available OCR Engine
+
+image
+
  
 ## Transkribus
 
@@ -155,13 +158,13 @@ Visit the official [Kraken](https://kraken.re/master/index.html) website here.
 
 
 
-# Google Cloud AI
+## Google Cloud AI
 
-## Introducton
+### Introducton
 
 
 
-## Data & Accuracy
+### Data & Accuracy
 
 
 
