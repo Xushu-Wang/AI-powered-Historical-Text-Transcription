@@ -16,9 +16,9 @@ Sample Workflow:
 ```mermaid
 graph TD;
     A[Pre-processing] --> B[OCR Engine];
-    B[OCR Engine]-->C[Correction Algorithm];
-    C[Correction Algorithm] --> D[Evaluation (Matrices: cer, wer[^1], levenshtein distance)];
-    D[Evaluation (Matrices: cer, wer[^1], levenshtein distance)] --> B[OCR Engine]
+    B-->C[Correction Algorithm];
+    C--> D[Evaluation (Matrices: cer, wer[^1], levenshtein distance)];
+    D--> B;
 ```
  
 
