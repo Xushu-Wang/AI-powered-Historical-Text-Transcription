@@ -43,8 +43,6 @@ def thresholding(image):
 
 ## Symspell Algorithm
 
-
-
 ```
 sym_spell = SymSpell(max_dictionary_edit_distance=2, prefix_length=7)
 dictionary_path = pkg_resources.resource_filename(
@@ -100,7 +98,7 @@ side by side images
 
 ## Tesseract
 
-## Introducton
+### Introducton
 
   Tesseract was originally developed at Hewlett-Packard Laboratories Bristol and at Hewlett-Packard Co, Greeley Colorado between 1985 and 1994, with some more changes made in 1996 to port to Windows, and some C++izing in 1998. In 2005 Tesseract was open sourced by HP. From 2006 until November 2018 it was developed by Google. Visit [Tesseract](https://github.com/tesseract-ocr/tesseract) repository here.
 
@@ -115,7 +113,7 @@ Weakness
 - extremely tenuous training process (using shell scripts), nearly inable to train
 - Inable to recognize cursive fonts, accuracy changes correspondent with cursiveness. 
 
-## DataSet & Accuracy
+### DataSet & Accuracy
 
 |Training Set|.|
 |Testing Set| |
@@ -134,14 +132,16 @@ Weakness
 image
 
 
-# Kraken
+## Kraken
 
 https://kraken.re/master/index.html
 
-## Introducton
+### Introducton
 
-## DataSet & Accuracy
+### DataSet & Accuracy
 
+|Training Set|[IAM Handwriting Database](https://fki.tic.heia-fr.ch/databases/iam-handwriting-database)|
+|Testing Set|Women traveling diaries / IAM database|
 
  Strength
  - Easily Trainable [^1]
