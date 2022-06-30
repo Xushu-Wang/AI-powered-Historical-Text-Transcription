@@ -21,7 +21,57 @@ graph TD;
     D--> |reselection| B;
     D--> |Accuracy meets the standard| E[Model checkpoint]
 ```
- 
+
+## Pre-processing
+
+```mermaid
+flowchart LR;
+    A[greyscale] --> B[Background removal];
+    B-->C[threshold];
+```
+
+```
+def get_greyscale(image):
+    return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+def remove_noise(image):
+    return cv2.bilateralFilter(image, 5, 75, 75)
+
+def thresholding(image):
+    return cv2.adaptiveThreshold(image, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 15, 9)
+```
+
+## Symspell Algorithm
+
+
+
+```
+sym_spell = SymSpell(max_dictionary_edit_distance=2, prefix_length=7)
+dictionary_path = pkg_resources.resource_filename(
+    "symspellpy", "frequency_dictionary_en_82_765.txt"
+)
+bigram_path = pkg_resources.resource_filename(
+    "symspellpy", "frequency_bigramdictionary_en_243_342.txt"
+)
+# term_index is the column of the term and count_index is the
+# column of the term frequency
+sym_spell.load_dictionary(dictionary_path, term_index=0, count_index=1)
+sym_spell.load_bigram_dictionary(bigram_path, term_index=0, count_index=2)
+
+# lookup suggestions for multi-word input strings (supports compound
+# splitting & merging)
+file_r = open("/Users/andywang/Desktop/output7(en).txt")
+result = file_r.read()
+
+# max edit distance per lookup (per single word, not per whole input string)
+suggestions = sym_spell.lookup_compound(result, max_edit_distance=2, transfer_casing=True)
+
+result_after = ""
+# display suggestion term, edit distance, and term frequency
+for suggestion in suggestions:
+    result_after += suggestion.term
+```
+
 
 ## Four Available OCR Engine
  
