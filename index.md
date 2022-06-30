@@ -1,19 +1,34 @@
-## Data+ 2022: AI-powered Historical Text Transcription
+# Data+ 2022: AI-powered Historical Text Transcription
 
+## Introduction
 
-
- <p>The Rubenstein Library holds millions of pages of handwritten documents ranging from ancient Papyri to records of Southern plantations to 21st century letters and diaries. Only a small subset of these documents have been digitized and made available online, and even fewer have been transcribed. The lack of text transcripts for handwritten documents impairs discovery and use of the materials, and prohibits any kind of computational text analysis that might support new avenues of research, including research related to the histories of racial injustice.<p>
+The Rubenstein Library holds millions of pages of handwritten documents ranging from ancient Papyri to records of Southern plantations to 21st century letters and diaries. Only a small subset of these documents have been digitized and made available online, and even fewer have been transcribed. The lack of text transcripts for handwritten documents impairs discovery and use of the materials, and prohibits any kind of computational text analysis that might support new avenues of research, including research related to the histories of racial injustice.
   
   While Optical Character Recognition (OCR) technology has made it possible to derive machine-readable text from typewritten documents in an automated way for several decades, the work of transcribing handwritten documents remains largely manual and labor-intensive. In the last few years, however, platforms like Transkribus have sought to harness the power of machine-learning by using Handwriting Text Recognition (HTR) to extract text from manuscripts and other handwritten documents held in libraries and archives. To date, the Rubenstein Library has conducted a few small-scale HTR experiments with mixed (and mostly disappointing) results. We have a lot to learn about the viability of HTR for our collections and about how to incorporate HTR into our existing workflows.
   
   In this Data+ project, students will test the viability of AI-powered HTR for transcribing digitized handwritten documents in the Rubenstein library and make recommendations for how the library might incorporate HTR into existing workflows, projects, and interfaces. Source material will be drawn from the Duke Digital Collections and will initially focus on a subset of digitized 19th-20th century women’s travel diaries, but could also include yet-to-be digitized materials related to the early history of Duke such as sermons, diaries, and lecture notes of our institution’s first president, Braxton Craven. As we approach Duke’s centennial, HTR-generated transcripts of the Craven materials would help support the university’s ongoing investigation into its institutional connection to slavery.
 
 
-# Transkribus
+## Machine-Learning Pipelines
+
+Sample Workflow: 
+
+```mermaid
+graph TD;
+    A[Pre-processing] --> B[OCR Engine];
+    B[OCR Engine]-->C[Correction Algorithm];
+    C[Correction Algorithm] --> D[Evaluation (Matrices: cer, wer[^1], levenshtein distance)];
+    D[Evaluation (Matrices: cer, wer[^1], levenshtein distance)] --> B[OCR Engine]
+```
+ 
+
+## Four Available OCR Engine
+ 
+## Transkribus
 
 ### Introducton
 
-  Transkribus is a comprehensive platform for the digitisation, AI-powered text recognition, transcription and searching of historical documents – from any place, any time, and in any language. [(https://readcoop.eu/transkribus/?sc=Transkribus)]
+  Transkribus is a comprehensive platform for the digitisation, AI-powered text recognition, transcription and searching of historical documents – from any place, any time, and in any language. Visit the official [Transkribus](https://readcoop.eu/transkribus/?sc=Transkribus) website here. 
 
 Strength
 - extremely high accuracy in cursive hand written text recognition
@@ -32,7 +47,7 @@ Weakness
 side by side images
 
 
-# Tesseract
+## Tesseract
 
 ## Introducton
 
@@ -77,6 +92,12 @@ https://kraken.re/master/index.html
 ## DataSet & Accuracy
 
 
+ Strength
+ - Easily Trainable [^1]
+ 
+ 
+ 
+ [^1]: The training Set of all the OCR Engines require highly consistent and legible hand-written documents, which can provide high quality ground-truth files. 
 
 
 
@@ -94,14 +115,9 @@ https://kraken.re/master/index.html
 
 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
 
 
 
@@ -116,6 +132,3 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Xushu-Wang/AI-powered-Historical-Test-Transcription/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
