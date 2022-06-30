@@ -108,7 +108,7 @@ Strength
 - Extremely high accuracy in recognizing a majority of printed fonts
 - Various line segmentation & Recognition mode
 - High Generalizability
-- Tesseract comes with a python wrapper class called Pytesseract [(https://pypi.org/project/pytesseract/)]
+- Tesseract comes with a python wrapper class called [Pytesseract] (https://pypi.org/project/pytesseract/)
 - Support training
 
 Weakness
@@ -117,8 +117,8 @@ Weakness
 
 ### DataSet & Accuracy
 
-|Training Set |.|
-|Testing Set| |
+|Training Set | Tessdata_fast & Tessdata_best|
+|Testing Set | Women Traveling Diaries|
 
 
 
@@ -130,15 +130,16 @@ Weakness
 | Cursive | McMillan, Mary | 10% |
 | Cursive | Harriet, Sanderson | 10% |
 
-
-image
+![Accuracy](https://user-images.githubusercontent.com/84580259/176760595-cd980c02-97b0-4ac5-9deb-d6829e07d92b.png)
 
 
 ## Kraken
 
-https://kraken.re/master/index.html
-
 ### Introducton
+
+Visit the official [Kraken](https://kraken.re/master/index.html) website here. 
+
+
 
 ### DataSet & Accuracy
 
