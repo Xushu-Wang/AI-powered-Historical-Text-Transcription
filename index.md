@@ -60,11 +60,11 @@ sym_spell.load_bigram_dictionary(bigram_path, term_index=0, count_index=2)
 
 # lookup suggestions for multi-word input strings (supports compound
 # splitting & merging)
-file_r = open("/Users/andywang/Desktop/output7(en).txt")
-result = file_r.read()
+file = open(r"")
+content = file.read()
 
 # max edit distance per lookup (per single word, not per whole input string)
-suggestions = sym_spell.lookup_compound(result, max_edit_distance=2, transfer_casing=True)
+suggestions = sym_spell.lookup_compound(content, max_edit_distance=2, transfer_casing=True)
 
 result_after = ""
 # display suggestion term, edit distance, and term frequency
