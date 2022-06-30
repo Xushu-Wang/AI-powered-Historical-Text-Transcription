@@ -41,6 +41,8 @@ def thresholding(image):
     return cv2.adaptiveThreshold(image, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 15, 9)
 ```
 
+![pre-processing](https://user-images.githubusercontent.com/84580259/176758355-7e534606-67ce-487a-b6fe-7102fd372d93.jpg)
+
 ## Symspell Algorithm
 
 ```
@@ -115,7 +117,7 @@ Weakness
 
 ### DataSet & Accuracy
 
-|Training Set|.|
+|Training Set |.|
 |Testing Set| |
 
 
@@ -162,24 +164,4 @@ https://kraken.re/master/index.html
 
 
 
-
-
-
-
-
-
-
-
-
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Xushu-Wang/AI-powered-Historical-Test-Transcription/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
