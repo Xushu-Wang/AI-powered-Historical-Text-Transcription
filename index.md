@@ -140,9 +140,7 @@ Weakness
 
 ### Introducton
 
-Visit the official [Kraken](https://kraken.re/master/index.html) website here. 
-
-
+kraken is a turn-key OCR system optimized for historical and non-Latin script material.kraken's main features are: Fully trainable layout analysis and character recognition; Right-to-Left, BiDi, and Top-to-Bottom script support; ALTO, PageXML, abbyXML, and hOCR output; Word bounding boxes and character cuts; Multi-script recognition support; Public repository of model files; Lightweight model files; Variable recognition network architectures. Visit the official [Kraken](https://kraken.re/master/index.html) website here. 
 
 ### DataSet & Accuracy
 
@@ -151,7 +149,13 @@ Visit the official [Kraken](https://kraken.re/master/index.html) website here.
 
  Strength
  - Easily Trainable [^1]
+ - Modular design, usable line segmentation tools
+ - 
  
+ Weakness
+ - Lack maintenance
+ - require MacOS/linux operating system
+ - Long training period
  
  
  [^1]: The training Set of all the OCR Engines require highly consistent and legible hand-written documents, which can provide high quality ground-truth files. 
