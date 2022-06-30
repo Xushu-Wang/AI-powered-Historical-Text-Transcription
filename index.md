@@ -17,7 +17,7 @@ Sample Workflow:
 graph TD;
     A[Pre-processing] --> B[OCR Engine];
     B-->C[Correction Algorithm];
-    C--> D[Evaluation(matrices: cer, wer, levenshtein distance);
+    C--> D[Evaluation];
     D--> B;
 ```
  
