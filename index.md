@@ -18,7 +18,8 @@ graph TD;
     A[Pre-processing] --> B[OCR Engine];
     B-->C[Correction Algorithm];
     C--> D[Evaluation];
-    D--> B;
+    D--> |reselection| B;
+    D--> |Accuracy meets the standard| E[Model checkpoint]
 ```
  
 
