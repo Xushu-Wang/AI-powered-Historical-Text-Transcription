@@ -107,10 +107,10 @@ Weakness
 
 ### DataSet & Accuracy
 
-|Training Set| [Jeremy Bentham Project](https://www.ucl.ac.uk/bentham-project/) |
-|Testing Set | Women Traveling Diaries | 
-|Accuracy w/ symspell algorithm| CER:  1.84, WER:  5.56, Levenshtein distance:  96 [^2] |
-|Accuracy w symspell algorithm | CER:  7.88, WER:  12.74, Levenshtein distance:  92 |
+| Training Set | [Jeremy Bentham Project](https://www.ucl.ac.uk/bentham-project/) |
+| Testing Set | Women Traveling Diaries | 
+| Accuracy w/ symspell algorithm | CER:  1.84, WER:  5.56, Levenshtein distance:  96 [^2] |
+| Accuracy w symspell algorithm | CER:  7.88, WER:  12.74, Levenshtein distance:  92 |
 
 [^2]: The current lowest CER produced by the general HTR tool (support more than cursive handwriting) in the industry is around 2.75%.
 
@@ -136,8 +136,8 @@ Weakness
 
 ### DataSet & Accuracy
 
-|Training Set | [tessdata_fast & tessdata_best](https://github.com/tesseract-ocr/tessdata)|
-|Testing Set | Women Traveling Diaries|
+| Training Set | [tessdata_fast & tessdata_best](https://github.com/tesseract-ocr/tessdata) |
+| Testing Set | Women Traveling Diaries |
 
 
 
@@ -186,10 +186,10 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
 
 ### Data & Accuracy
 
-|Training Set|N/A|
-|Testing Set|Women traveling diaries|
-|Accuracy w/ symspell algorithm|CER:  28.69, WER:  46.77, Levenshtein distance:  80|
-|Accuracy w symspell algorithm|CER:  31.43, WER:  49.45, Levenshtein distance:  78|
+| Training Set | N/A |
+| Testing Set | Women traveling diaries |
+| Accuracy w/ symspell algorithm | CER:  28.69, WER:  46.77, Levenshtein distance:  80 |
+| Accuracy w symspell algorithm | CER:  31.43, WER:  49.45, Levenshtein distance:  78 |
 
 
 ## Future Analysis
