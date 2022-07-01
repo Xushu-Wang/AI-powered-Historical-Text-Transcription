@@ -13,7 +13,8 @@ The Rubenstein Library holds millions of pages of handwritten documents ranging 
 
 Sample Workflow: 
 
-```mermaid
+```
+  mermaid
 graph TD;
     A[Pre-processing] --> B[OCR Engine];
     B-->C[Correction Algorithm];
@@ -24,7 +25,8 @@ graph TD;
 
 ## Pre-processing
 
-```mermaid
+```
+  mermaid
 flowchart LR;
     A[greyscale] --> B[Background removal];
     B-->C[threshold];
