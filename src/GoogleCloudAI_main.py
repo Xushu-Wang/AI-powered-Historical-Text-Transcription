@@ -21,14 +21,14 @@ file_r = open("/Users/andywang/Desktop/output7(en).txt")
 result = file_r.read()
 
 # max edit distance per lookup (per single word, not per whole input string)
-suggestions = sym_spell.lookup_compound(result, max_edit_distance=2, transfer_casing=True)
+suggestions = sym_spell.lookup_compound(result, max_edit_distance=2, transfer_casing= True)
 
 result_after = ""
 # display suggestion term, edit distance, and term frequency
 for suggestion in suggestions:
     result_after += suggestion.term
 
-file_g = open("/Users/andywang/Desktop/martha7true.txt")
+file_g = open("/Users/andywang/Desktop/AI-powered-Historical-Test-Transcription/gt/martha7true.txt")
 ground_truth = file_g.read()
 
 

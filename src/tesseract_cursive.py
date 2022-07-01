@@ -67,9 +67,9 @@ def thresholding(image):
 
 
 #import images
-stewart = cv2.imread(r"/Users/andywang/Desktop/stewart.jpg")
-mcmillan = cv2.imread(r"/Users/andywang/Desktop/mcmillan.jpg")
-martha = cv2.imread(r"/Users/andywang/Desktop/martha.jpg")
+stewart = cv2.imread(r"/Users/andywang/Desktop/AI-powered-Historical-Test-Transcription/images/stewart.jpg")
+mcmillan = cv2.imread(r"/Users/andywang/Desktop/AI-powered-Historical-Test-Transcription/images/mcmillan.jpg")
+martha = cv2.imread(r"/Users/andywang/Desktop/AI-powered-Historical-Test-Transcription/images/martha.jpg")
 
 #invoke preprocessing
 stewart = get_greyscale(stewart)
@@ -141,15 +141,15 @@ for suggestion in suggestion_ma:
 
 #ground truth
 
-file_s = open(r"/Users/andywang/Desktop/stewart.rtf")
+file_s = open(r"/Users/andywang/Desktop/AI-powered-Historical-Test-Transcription/gt/stewart.rtf")
 content_s = file_s.read()
 gt_stewart = rtf_to_text(content_s)
 
-file_mc = open(r"/Users/andywang/Desktop/mcmillan.rtf")
+file_mc = open(r"/Users/andywang/Desktop/AI-powered-Historical-Test-Transcription/gt/mcmillan.rtf")
 content_mc = file_mc.read()
 gt_mcmillan = rtf_to_text(content_mc)
 
-file_ma = open(r"/Users/andywang/Desktop/Data+/Martha Foster Crawford diary, 1846-1850 and 1867/wtddy11001/wtddy11001-15/wtddy11001-15.rtf")
+file_ma = open(r"/Users/andywang/Desktop/AI-powered-Historical-Test-Transcription/gt/martha.rtf")
 content_ma = file_ma.read()
 gt_martha = rtf_to_text(content_ma)
 

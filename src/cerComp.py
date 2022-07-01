@@ -7,11 +7,9 @@ N = 4
 
 # Data on X-axis
 
-cer = np.array([10, 20, 30, 40])
-wer = np.array([10, 20, 30, 40])
-
-cer = 100 - cer
-wer = 100 - wer
+cer = np.array([28.69, 20, 1.84, 66.09])
+wer = np.array([46.77, 20, 5.56, 92.95])
+distance = np.array([80, 20, 96, 50])
 
 
 # Position of bars on x-axis
@@ -24,14 +22,15 @@ plt.figure(figsize=(10,7))
 width = 0.3       
 
 # Plotting
-plt.bar(ind - width, cer , width, label='car')
-plt.bar(ind, wer, width, label='war')
+plt.bar(ind + 0.15 - width, cer , width, label='CER')
+plt.bar(ind + 0.15, wer, width, label='WER')
+plt.bar(ind + 0.15 + width, distance, width, label='Levenshtein distance')
 
-plt.xlabel('Author', font = "DejaVu Sans", fontsize = 14, labelpad = 15
+plt.xlabel('OCR Engine', font = "DejaVu Sans", fontsize = 14, labelpad = 15
             ,color = '#333333')
 plt.ylabel('Accuracy (%)', font = "DejaVu Sans", fontsize = 14, labelpad = 15
             ,color = '#333333')
-plt.title('Tesseract Accuracy (Comparing Different Authors)', fontsize = 18, font = "DejaVu Sans",loc = "center", 
+plt.title('Different OCR Engines', fontsize = 18, font = "DejaVu Sans",loc = "center", 
           color = 'black', pad = 15, weight = "bold")
 
 # xticks()
