@@ -105,10 +105,10 @@ Weakness
 
 |Training Set| [Jeremy Bentham Project] (https://www.ucl.ac.uk/bentham-project/) |
 |Testing Set | Women Traveling Diaries | 
-|Accuracy w/ symspell algorithm| CER:  1.84, WER:  5.56, Levenshtein distance:  96 [2^] |
+|Accuracy w/ symspell algorithm| CER:  1.84, WER:  5.56, Levenshtein distance:  96 [^2] |
 |Accuracy w symspell algorithm | CER:  7.88, WER:  12.74, Levenshtein distance:  92 |
 
-[2^]: The current lowest CER produced by the general HTR tool (support more than cursive handwriting) in the industry is around 2.75%.
+[^2]: The current lowest CER produced by the general HTR tool (support more than cursive handwriting) in the industry is around 2.75%.
 
 
 
@@ -127,11 +127,12 @@ Strength
 
 Weakness
 - extremely tenuous training process (using shell scripts), nearly inable to train
+- training is based on lines (segemented files paired up with ground-truth)
 - Inable to recognize cursive fonts, accuracy changes correspondent with cursiveness. 
 
 ### DataSet & Accuracy
 
-|Training Set | [Tessdata_fast & Tessdata_best] (https://github.com/tesseract-ocr/tessdata)|
+|Training Set | [tessdata_fast & tessdata_best] (https://github.com/tesseract-ocr/tessdata)|
 |Testing Set | Women Traveling Diaries|
 
 
@@ -159,7 +160,7 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
 |Testing Set|Women traveling diaries / IAM database|
 
  Strength
- - Easily Trainable [^1]
+ - Easily Trainable [^1], training is based on pages
  - Modular design, usable line segmentation tools
  
  
@@ -169,7 +170,7 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
  - Long training period
  
  
- [^1]: The training Set of all the OCR Engines require highly consistent and legible hand-written documents, which can provide high quality ground-truth files. 
+ [^1]: The training Set of all the OCR Engines require highly consistent and legible hand-written documents, which can provide high quality ground-truth files. Joined-up writing documents are relatively harder to train. 
 
 
 
@@ -187,5 +188,6 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
 |Accuracy w symspell algorithm|CER:  31.43, WER:  49.45, Levenshtein distance:  78|
 
 
+## Future Analysis
 
 
