@@ -103,7 +103,7 @@ Weakness
 
 ### DataSet & Accuracy
 
-|Training Set| [Jeremy Bentham Project] (https://www.ucl.ac.uk/bentham-project/) |
+|Training Set| [Jeremy Bentham Project](https://www.ucl.ac.uk/bentham-project/) |
 |Testing Set | Women Traveling Diaries | 
 |Accuracy w/ symspell algorithm| CER:  1.84, WER:  5.56, Levenshtein distance:  96 [^2] |
 |Accuracy w symspell algorithm | CER:  7.88, WER:  12.74, Levenshtein distance:  92 |
@@ -132,7 +132,7 @@ Weakness
 
 ### DataSet & Accuracy
 
-|Training Set | [tessdata_fast & tessdata_best] (https://github.com/tesseract-ocr/tessdata)|
+|Training Set | [tessdata_fast & tessdata_best](https://github.com/tesseract-ocr/tessdata)|
 |Testing Set | Women Traveling Diaries|
 
 
