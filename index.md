@@ -83,7 +83,11 @@ ble sppelingmsitakes                        rrible spelling mistakes
 
 ## Four Available OCR Engine
 
-image
+
+
+
+![Figure_2](https://user-images.githubusercontent.com/84580259/176951499-70f0324b-3499-46d1-9bb3-fdf0f2355037.png)
+
 
  
 ## Transkribus
