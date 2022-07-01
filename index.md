@@ -72,6 +72,14 @@ for suggestion in suggestions:
     result_after += suggestion.term
 ```
 
+```
+Example:
+
+Can yu readthis messa ge despite thehori    can you read this message despite the ho
+ble sppelingmsitakes                        rrible spelling mistakes
+
+```
+
 
 ## Four Available OCR Engine
 
@@ -95,10 +103,13 @@ Weakness
 
 ### DataSet & Accuracy
 
-|Training Set| Bentham Project |
+|Training Set| [Jeremy Bentham Project] (https://www.ucl.ac.uk/bentham-project/) |
 |Testing Set | Women Traveling Diaries | 
+|Accuracy w/ symspell algorithm| CER:  1.84, WER:  5.56, Levenshtein distance:  96 [2^] |
+|Accuracy w symspell algorithm | CER:  7.88, WER:  12.74, Levenshtein distance:  92 |
 
-side by side images
+[2^]: The current lowest CER produced by the general HTR tool (support more than cursive handwriting) in the industry is around 2.75%.
+
 
 
 ## Tesseract
@@ -120,7 +131,7 @@ Weakness
 
 ### DataSet & Accuracy
 
-|Training Set | Tessdata_fast & Tessdata_best|
+|Training Set | [Tessdata_fast & Tessdata_best] (https://github.com/tesseract-ocr/tessdata)|
 |Testing Set | Women Traveling Diaries|
 
 
@@ -150,7 +161,7 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
  Strength
  - Easily Trainable [^1]
  - Modular design, usable line segmentation tools
- - 
+ 
  
  Weakness
  - Lack maintenance
@@ -162,13 +173,18 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
 
 
 
-## Google Cloud AI
+## Google Cloud Vision OCR
 
 ### Introducton
 
 
 
 ### Data & Accuracy
+
+|Training Set|N/A|
+|Testing Set|Women traveling diaries|
+|Accuracy w/ symspell algorithm|CER:  28.69, WER:  46.77, Levenshtein distance:  80|
+|Accuracy w symspell algorithm|CER:  31.43, WER:  49.45, Levenshtein distance:  78|
 
 
 
