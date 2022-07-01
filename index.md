@@ -116,6 +116,9 @@ Weakness
 
 
 
+side by side image
+
+
 ## Tesseract
 
 ### Introducton
@@ -161,8 +164,10 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
 
 ### DataSet & Accuracy
 
-|Training Set|[IAM Handwriting Database](https://fki.tic.heia-fr.ch/databases/iam-handwriting-database)|
-|Testing Set|Women traveling diaries / IAM database|
+| Training Set | [IAM Handwriting Database](https://fki.tic.heia-fr.ch/databases/iam-handwriting-database) |
+| Testing Set | Women traveling diaries / IAM database |
+| Accuracy w/ symspell algorithm | 111 |
+| Accuracy w symspell algorithm | 122 |
 
  Strength
  - Easily Trainable [^1], training is based on pages
