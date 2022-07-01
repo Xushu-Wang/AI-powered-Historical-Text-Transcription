@@ -143,11 +143,12 @@ Weakness
 
 | Font type | Author | Accuracy |
 | --------- | ------ | -------- |
-| Non-cursive | N/A  | 98% |
-| Cursive | N/A | 10% |
+| Non-cursive | N/A  | > 95%, around 96% - 97% accuracy in both characters and words [^3] |
 | Cursive | Crawford, Martha | CER: 68.28, WER: 91.38, Levenshtein distance: 45 |
 | Cursive | McMillan, Mary | Not recognizable |
 | Cursive | Harriet, Sanderson | CER: 66.09, WER: 92.95, Levenshtein distance: 50 |
+
+[^3]: The data is released by the official tesseract UNLV testing site. More specific information can be found [here](https://tesseract-ocr.github.io/tessdoc/#testing) 
 
 ![Accuracy](https://user-images.githubusercontent.com/84580259/176760595-cd980c02-97b0-4ac5-9deb-d6829e07d92b.png)
 
