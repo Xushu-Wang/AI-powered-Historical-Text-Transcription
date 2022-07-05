@@ -42,7 +42,7 @@ def remove_noise5(image):
     
 def remove_noise3(image):
     return cv2.bilateralFilter(image, 3, 75, 75)
-    #return cv2.medianBlur(image, 5)
+    #return cv2.medianBlur(image, 3)
 
 #Preprocessing - thresholding
 def thresholding(image):
@@ -85,11 +85,12 @@ martha = remove_noise5(martha)
 martha = thresholding(martha)
 
 
-#cropping
-mcmillan = mcmillan[300:1200, 0:800]
 
 #mcmillian is vertical handwriting
 mcmillan = cv2.rotate(mcmillan, cv2.ROTATE_90_CLOCKWISE)
+
+#cropping
+#mcmillan = mcmillan[100:800, 100:900]
 
 #check it
 #cv2.imshow("image", mcmillan)
@@ -175,7 +176,6 @@ distance = (fuzz.ratio(trans_stewart, gt_stewart), fuzz.ratio(trans_mcmillan, gt
 
 cer = 100 - cer
 wer = 100 - wer
-
 
 # Position of bars on x-axis
 ind = np.arange(N)

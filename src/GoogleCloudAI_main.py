@@ -17,7 +17,7 @@ sym_spell.load_bigram_dictionary(bigram_path, term_index=0, count_index=2)
 
 # lookup suggestions for multi-word input strings (supports compound
 # splitting & merging)
-file_r = open("/Users/andywang/Desktop/output7(en).txt")
+file_r = open("/Users/andywang/Desktop/AI-powered-Historical-Test-Transcription/gt/cloud.txt")
 result = file_r.read()
 
 # max edit distance per lookup (per single word, not per whole input string)

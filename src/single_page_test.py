@@ -1,4 +1,3 @@
-from cv2 import waitKey
 import pytesseract
 import cv2 
 from asrtoolkit import cer, wer
@@ -20,17 +19,21 @@ def remove_noise(image):
 def thresholding(image):
     return cv2.adaptiveThreshold(image, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 15, 9)
 
-img1 = cv2.imread(r"/Users/andywang/Desktop/stewart.jpg")
-img = cv2.imread(r"/Users/andywang/Desktop/stewart.jpg")
+img = cv2.imread(r"/Users/andywang/Desktop/mcmillan copy.jpg")
 img = get_greyscale(img)
 img = remove_noise(img)
 img = thresholding(img)
+img = img[100:800, 100:900]
 
-file_mc = open(r"/Users/andywang/Desktop/stewart.rtf")
-content_mc = file_mc.read()
-ground_truth_mcmillan = rtf_to_text(content_mc)
+
+cv2.imshow('img', img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+
+file = open(r"/Users/andywang/Desktop/AI-powered-Historical-Test-Transcription/gt/mcmillan.rtf")
+content = file.read()
+ground_truth = rtf_to_text(content)
 
 print(ocr_core(img))
-print(ocr_core(img1))
-print(cer(ocr_core(img), ground_truth_mcmillan))
-print(cer(ocr_core(img1), ground_truth_mcmillan))
+print(cer(ocr_core(img), ground_truth), wer(ocr_core(img), ground_truth))

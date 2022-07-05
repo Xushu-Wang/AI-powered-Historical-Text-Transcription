@@ -1,6 +1,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+def autolabel(rectangle):
+    for rect in rectangle:
+        height = rect.get_height()
+        
+        ax.annotate(str(height), xy = (rect.get_x() + 0.05, height + 0.3), font = 'Arial', weight = 'bold')
+
+fig, ax = plt.subplots()
+
+
 #Side-by-side bar chart
 
 N = 4
@@ -15,23 +24,38 @@ distance = np.array([80, 20, 96, 50])
 # Position of bars on x-axis
 ind = np.arange(N)
 
-# Figure size
-plt.figure(figsize=(10,7))
-
 # Width of a bar 
 width = 0.3       
 
 # Plotting
-plt.bar(ind + 0.15 - width, cer , width, label='CER')
-plt.bar(ind + 0.15, wer, width, label='WER')
-plt.bar(ind + 0.15 + width, distance, width, label='Levenshtein distance')
+rect1 = ax.bar(ind + 0.15 - width, cer , width, label='CER', color = 'rosybrown')
+rect2 = ax.bar(ind + 0.15, wer, width, label='WER', color = 'indianred')
+rect3 = ax.bar(ind + 0.15 + width, distance, width, label='Levenshtein distance', color = 'maroon')
 
 plt.xlabel('OCR Engine', font = "DejaVu Sans", fontsize = 14, labelpad = 15
             ,color = '#333333')
 plt.ylabel('Accuracy (%)', font = "DejaVu Sans", fontsize = 14, labelpad = 15
             ,color = '#333333')
-plt.title('Different OCR Engines', fontsize = 18, font = "DejaVu Sans",loc = "center", 
+ax.set_title('Different OCR Engines', fontsize = 18, font = "DejaVu Sans",loc = "center", 
           color = 'black', pad = 15, weight = "bold")
+
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['left'].set_visible(False)
+ax.spines['bottom'].set_color('#DDDDDD')
+
+ax.tick_params(bottom=False, left=False)
+
+ax.set_axisbelow(True)
+ax.yaxis.grid(True, color='#EEEEEE')
+ax.xaxis.grid(False)
+
+#fig.tight_layout()
+
+
+autolabel(rect1)
+autolabel(rect2)
+autolabel(rect3)
 
 # xticks()
 # First argument - A list of positions at which ticks should be placed
@@ -39,5 +63,5 @@ plt.title('Different OCR Engines', fontsize = 18, font = "DejaVu Sans",loc = "ce
 plt.xticks(ind + width / 2, ('Google Cloud AI', 'Kraken', 'Transkribus', 'Tesseract'), font = 'DejaVu Sans')
 
 # Finding the best position for legends and putting it
-plt.legend(loc='best')
+ax.legend(loc='best')
 plt.show()
