@@ -19,14 +19,14 @@ graph TD;
     B-->C[Correction Algorithm];
     C-->D[Evaluation];
     D-->|reselection| B;
-    D-->|Accuracy meets the standard| E[Model checkpoint]
+    D-->|Accuracy meets the standard| E[Model checkpoint];
 ```
 
 ## Pre-processing
 
 ```mermaid
 flowchart LR;
-    A[greyscale] --> B[Background removal];
+    A[greyscale]-->B[Background removal];
     B-->C[threshold];
 ```
 
