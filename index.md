@@ -204,6 +204,6 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
 3. Better self-designed post OCR correction algorithm 
 4. Further computational analysis and visualization of HTR-generated text using NLP or other text-mining techniques or methods.
 
-
+------------------------------------------------------------------------------------------------------------------------
 
 
