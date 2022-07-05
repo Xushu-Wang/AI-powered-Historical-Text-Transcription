@@ -115,8 +115,7 @@ Weakness
 [^2]: The current lowest CER produced by the general HTR tool (support more than cursive handwriting) in the industry is around 2.75%.
 
 
-
-side by side image
+<img width="1126" alt="Screen Shot 2022-07-05 at 14 01 38" src="https://user-images.githubusercontent.com/84580259/177388447-6ef7c892-b0cc-4aff-b9d0-b43ac78d9b0c.png">
 
 
 ## Tesseract
@@ -148,7 +147,7 @@ Weakness
 | --------- | ------ | -------- |
 | Non-cursive | N/A  | > 95%, around 96% - 97% accuracy in both characters and words [^3] |
 | Cursive | Crawford, Martha | CER: 68.28, WER: 91.38, Levenshtein distance: 45 |
-| Cursive | McMillan, Mary | Not recognizable |
+| Cursive | McMillan, Mary | CER: 75.74, WER: 98.44, Levenshtein distance: 30(nearly unrecognizable) |
 | Cursive | Harriet, Sanderson | CER: 66.09, WER: 92.95, Levenshtein distance: 50 |
 
 [^3]: The data is released by the official tesseract UNLV testing site. More specific information can be found [here](https://tesseract-ocr.github.io/tessdoc/#testing) 
@@ -198,6 +197,13 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
 | Accuracy w symspell algorithm | CER:  31.43, WER:  49.45, Levenshtein distance:  78 |
 
 
-## Future Analysis
+## Future Direction
+
+1. Retrain Kraken/Tesseract using different dataset or using labeled women traveling diaries
+2. Explore the viability of developing generalizable HTR models for genres of handwritten documents in the Rubenstein (e.g. 19th century diaries from the same hand vs. 20th century business correspondence from different hands).
+3. Better self-designed post OCR correction algorithm 
+4. Further computational analysis and visualization of HTR-generated text using NLP or other text-mining techniques or methods.
+
+
 
 
