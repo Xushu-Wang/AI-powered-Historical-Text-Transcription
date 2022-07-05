@@ -33,10 +33,10 @@ rect2 = ax.bar(ind + 0.15, wer, width, label='WER', color = 'indianred')
 rect3 = ax.bar(ind + 0.15 + width, distance, width, label='Levenshtein distance', color = 'maroon')
 
 plt.xlabel('OCR Engine', font = "DejaVu Sans", fontsize = 14, labelpad = 15
-            ,color = '#333333')
+            ,weight = 'bold')
 plt.ylabel('Accuracy (%)', font = "DejaVu Sans", fontsize = 14, labelpad = 15
-            ,color = '#333333')
-ax.set_title('Different OCR Engines', fontsize = 18, font = "DejaVu Sans",loc = "center", 
+            , weight = 'bold')
+ax.set_title('OCR Engines Comparison', fontsize = 18, font = "DejaVu Sans",loc = "center", 
           color = 'black', pad = 15, weight = "bold")
 
 ax.spines['top'].set_visible(False)
@@ -60,7 +60,7 @@ autolabel(rect3)
 # xticks()
 # First argument - A list of positions at which ticks should be placed
 # Second argument -  A list of labels to place at the given locations
-plt.xticks(ind + width / 2, ('Google Cloud AI', 'Kraken', 'Transkribus', 'Tesseract'), font = 'DejaVu Sans')
+plt.xticks(ind + width / 2, ('Google Cloud AI', 'Kraken', 'Transkribus', 'Tesseract'), font = 'DejaVu Sans', weight = 'bold')
 
 # Finding the best position for legends and putting it
 ax.legend(loc='best')
