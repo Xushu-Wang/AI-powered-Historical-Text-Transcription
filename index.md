@@ -15,11 +15,11 @@ Sample Workflow:
 
 ```mermaid
 graph TD;
-    A[Pre-processing] --> B[OCR Engine];
+    A[Pre-processing]-->B[OCR Engine];
     B-->C[Correction Algorithm];
-    C--> D[Evaluation];
-    D--> |reselection| B;
-    D--> |Accuracy meets the standard| E[Model checkpoint]
+    C-->D[Evaluation];
+    D-->|reselection| B;
+    D-->|Accuracy meets the standard| E[Model checkpoint]
 ```
 
 ## Pre-processing
@@ -129,7 +129,7 @@ Strength
 - Extremely high accuracy in recognizing a majority of printed fonts
 - Various line segmentation & Recognition mode
 - High Generalizability
-- Tesseract comes with a python wrapper class called [Pytesseract] (https://pypi.org/project/pytesseract/)
+- Tesseract comes with a python wrapper class called [Pytesseract](https://pypi.org/project/pytesseract/)
 - Support training
 
 Weakness
