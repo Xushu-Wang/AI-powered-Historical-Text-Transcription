@@ -135,6 +135,7 @@ Weakness
 - extremely tenuous training process (using shell scripts), nearly inable to train
 - training is based on lines (segemented files paired up with ground-truth)
 - Inable to recognize cursive fonts, accuracy changes correspondent with cursiveness. 
+- Low accuracy in transcribing vowels, especially a & e
 
 ### DataSet & Accuracy
 
