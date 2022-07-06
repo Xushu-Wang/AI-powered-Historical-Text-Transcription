@@ -30,12 +30,6 @@ flowchart LR;
     B-->C[threshold];
 ```
 
-```mermaid
-flowchart LR;
-    A[Transcription Result]-->B[Rectified Result];
-    B-->C[Ground Truth];
-```
-
 
 ```
 def get_greyscale(image):
@@ -51,6 +45,12 @@ def thresholding(image):
 ![pre-processing](https://user-images.githubusercontent.com/84580259/176758355-7e534606-67ce-487a-b6fe-7102fd372d93.jpg)
 
 ## Symspell Algorithm
+
+```mermaid
+flowchart LR;
+    A[Transcription Result]-->B[Rectified Result];
+    B-->|Compare| C[Ground Truth];
+```
 
 ```
 sym_spell = SymSpell(max_dictionary_edit_distance=2, prefix_length=7)
