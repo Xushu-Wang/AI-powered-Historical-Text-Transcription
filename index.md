@@ -30,6 +30,13 @@ flowchart LR;
     B-->C[threshold];
 ```
 
+```mermaid
+flowchart LR;
+    A[Transcription Result]-->B[Rectified Result];
+    B-->C[Ground Truth];
+```
+
+
 ```
 def get_greyscale(image):
     return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
