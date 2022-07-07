@@ -12,13 +12,13 @@ fig, ax = plt.subplots()
 
 #Side-by-side bar chart
 
-N = 4
+N = 5
 
 # Data on X-axis
 
-cer = np.array([28.69, 15, 1.84, 66.09])
-wer = np.array([46.77, 20, 5.56, 92.95])
-distance = np.array([80, 85, 96, 50])
+cer = np.array([28.69, 15, 1.84, 66.09, 19.83])
+wer = np.array([46.77, 20, 5.56, 92.95, 42.13])
+distance = np.array([80, 85, 96, 50, 87])
 
 
 # Position of bars on x-axis
@@ -60,7 +60,7 @@ autolabel(rect3)
 # xticks()
 # First argument - A list of positions at which ticks should be placed
 # Second argument -  A list of labels to place at the given locations
-plt.xticks(ind + width / 2, ('Google Cloud AI', 'Kraken', 'Transkribus', 'Tesseract'), font = 'DejaVu Sans', weight = 'bold')
+plt.xticks(ind + width / 2, ('Google Cloud AI', 'Kraken', 'Transkribus', 'Tesseract', 'AWS Textract'), font = 'DejaVu Sans', weight = 'bold')
 
 # Finding the best position for legends and putting it
 ax.legend(loc='best')
