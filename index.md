@@ -88,12 +88,11 @@ ble sppelingmsitakes                        rrible spelling mistakes
 ```
 
 
-## Four Available OCR Engine
+## Five Available OCR Engine
 
 
+![OCR](https://user-images.githubusercontent.com/84580259/177837481-d8675497-ad59-47af-9b46-f11ffc47f40e.png)
 
-
-![Figure_2](https://user-images.githubusercontent.com/84580259/176951499-70f0324b-3499-46d1-9bb3-fdf0f2355037.png)
 
 
  
@@ -206,6 +205,25 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
 | Testing Set | Women traveling diaries |
 | Accuracy w/ symspell algorithm | CER:  28.69, WER:  46.77, Levenshtein distance:  80 |
 | Accuracy w symspell algorithm | CER:  31.43, WER:  49.45, Levenshtein distance:  78 |
+
+
+![WechatIMG222](https://user-images.githubusercontent.com/84580259/177836913-c5b19c26-26e4-44b3-9a50-da14b7dbf0e9.png)
+
+
+## AWS Textract
+
+### Introduction
+
+Amazon Textract is based on the same proven, highly scalable, deep-learning technology that was developed by Amazon's computer vision scientists to analyze billions of images and videos daily. You don't need any machine learning expertise to use it. Amazon Textract includes simple, easy-to-use APIs that can analyze image files and PDF files. Amazon Textract is always learning from new data, and Amazon is continually adding new features to the service.
+
+### Data & Accuracy
+
+| Training Set | N/A |
+| Testing Set | Women traveling diaries |
+| Accuracy w symspell algorithm | CER: 19.83, WER: 42.13, Levenshtein distance: 87 |
+ |
+
+
 
 
 ## Future Direction
