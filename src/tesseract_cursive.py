@@ -168,6 +168,8 @@ print("Crawford, Martha Foster: ", martha_data)
 
 N = 3
 
+fig, ax = plt.subplots()
+
 # Data on X-axis
 
 cer = np.array([cer(trans_stewart, gt_stewart), cer(trans_mcmillan, gt_mcmillan), cer(trans_martha, gt_martha)])
@@ -181,27 +183,26 @@ wer = 100 - wer
 ind = np.arange(N)
 
 # Figure size
-plt.figure(figsize=(10,7))
 
 # Width of a bar 
 width = 0.3       
 
 # Plotting
-plt.bar(ind + 0.15 - width, cer , width, label='car')
-plt.bar(ind + 0.15, wer, width, label='war')
-plt.bar(ind + 0.15 + width, distance, width, label='levenstein distance')
+ax.bar(ind + 0.15 - width, cer , width, label='car', color = 'rosybrown')
+ax.bar(ind + 0.15, wer, width, label='war', color = 'indianred')
+ax.bar(ind + 0.15 + width, distance, width, label='levenstein distance', color = 'maroon')
 
 plt.xlabel('Author', font = "DejaVu Sans", fontsize = 14, labelpad = 15
-            ,color = '#333333')
+            ,weight = 'bold')
 plt.ylabel('Accuracy (%)', font = "DejaVu Sans", fontsize = 14, labelpad = 15
-            ,color = '#333333')
+            ,weight = 'bold')
 plt.title('Tesseract Accuracy (Comparing Different Authors)', fontsize = 18, font = "DejaVu Sans",loc = "center", 
-          color = 'black', pad = 15, weight = "bold")
+            pad = 15, weight = "bold")
 
 # xticks()
 # First argument - A list of positions at which ticks should be placed
 # Second argument -  A list of labels to place at the given locations
-plt.xticks(ind + width / 2, ('Stewart', 'Mcmillan', 'Crawford'), font = 'DejaVu Sans')
+plt.xticks(ind + width / 2, ('Stewart', 'Mcmillan', 'Crawford'), font = 'DejaVu Sans', weight = 'bold')
 
 # Finding the best position for legends and putting it
 plt.legend(loc='best')
