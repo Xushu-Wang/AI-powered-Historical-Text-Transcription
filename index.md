@@ -160,7 +160,10 @@ Weakness
 
 [^3]: The data is released by the official tesseract UNLV testing site. More specific information can be found [here](https://tesseract-ocr.github.io/tessdoc/#testing) 
 
-![Accuracy](https://user-images.githubusercontent.com/84580259/176760595-cd980c02-97b0-4ac5-9deb-d6829e07d92b.png)
+
+![tesseract](https://user-images.githubusercontent.com/84580259/177799433-ede7103d-a21f-4b2e-aad3-d18a81e337bd.png)
+
+
 
 
 ## Kraken
