@@ -207,6 +207,9 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
 | Accuracy w symspell algorithm | CER:  31.43, WER:  49.45, Levenshtein distance:  78 |
 
 
+
+Particular Strength: 
+
 ![WechatIMG222](https://user-images.githubusercontent.com/84580259/177836913-c5b19c26-26e4-44b3-9a50-da14b7dbf0e9.png)
 
 
@@ -221,8 +224,6 @@ Amazon Textract is based on the same proven, highly scalable, deep-learning tech
 | Training Set | N/A |
 | Testing Set | Women traveling diaries |
 | Accuracy w symspell algorithm | CER: 19.83, WER: 42.13, Levenshtein distance: 87 |
- |
-
 
 
 
