@@ -49,7 +49,7 @@ def thresholding(image):
 ```mermaid
 flowchart LR;
     A[Transcription Result]-->B[Rectified Result];
-    B-->|Compare| C[Ground Truth];
+    B-->|Compare CER/WER/Levenshtein distance| C[Ground Truth];
 ```
 
 ```
