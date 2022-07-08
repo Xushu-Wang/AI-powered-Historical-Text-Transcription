@@ -34,7 +34,7 @@ rect3 = ax.bar(ind + 0.15 + width, distance, width, label='Levenshtein distance'
 
 plt.xlabel('OCR Engine', font = "DejaVu Sans", fontsize = 14, labelpad = 15
             ,weight = 'bold')
-plt.ylabel('Accuracy (%)', font = "DejaVu Sans", fontsize = 14, labelpad = 15
+plt.ylabel('Percentage (%)', font = "DejaVu Sans", fontsize = 14, labelpad = 15
             , weight = 'bold')
 ax.set_title('OCR Engines Comparison', fontsize = 18, font = "DejaVu Sans",loc = "center", 
           color = 'black', pad = 15, weight = "bold")
