@@ -72,6 +72,9 @@ mcmillan = cv2.imread(r"/Users/andywang/Desktop/AI-powered-Historical-Test-Trans
 martha = cv2.imread(r"/Users/andywang/Desktop/AI-powered-Historical-Test-Transcription/images/martha.jpg")
 
 #invoke preprocessing
+
+#For the convenience of testing, Authors are not stored in a vector data format
+
 stewart = get_greyscale(stewart)
 stewart = remove_noise5(stewart)
 stewart = thresholding(stewart)
