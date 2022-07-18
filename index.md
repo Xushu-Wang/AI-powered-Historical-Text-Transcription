@@ -19,7 +19,8 @@ graph TD;
     B-->C[Correction Algorithm];
     C-->D[Evaluation];
     D-->|reselection| B;
-    D-->|Accuracy meets the standard| E[Model checkpoint];
+    D-->|Accuracy meets the standard| E[Model checkpoint]
+    E--> F[User Interface & Transcription Software];
 ```
 
 Initially, we choose five mainstream OCR engines developed by renowned tech companies, which already generate satisfying results on transcribing printed text. Covering most of the transcription industry, these engines are Transkribus, Tesseract (from HP & Google), Kraken, Google Cloud Vision, and Amazon AWS Textract. These engines are relatively mature, leaving space for future development and training. Obviously, there are still a few OCR engines available out in the internet, like Ocular(from University of California, Berkeley), but they have been proved not suitable for this task of written historical text transcription. 
@@ -155,8 +156,8 @@ Weakness
 
 ### DataSet & Accuracy
 
-| Training Set | [tessdata_fast & tessdata_best](https://github.com/tesseract-ocr/tessdata) |
-| Testing Set | Women Traveling Diaries |
+| Training Set | [tessdata_fast & tessdata_best](https://github.com/tesseract-ocr/tessdata) This repository contains the best trained data for the Tesseract Open Source OCR Engine.|
+| Testing Set | Women's Travel Diaries |
 
 
 
@@ -183,20 +184,21 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
 
 ### DataSet & Accuracy
 
-| Training Set | [IAM Handwriting Database](https://fki.tic.heia-fr.ch/databases/iam-handwriting-database) |
-| Testing Set | Women traveling diaries / IAM database |
-| Accuracy w/ symspell algorithm | 111 |
-| Accuracy w symspell algorithm | 122 |
+| Training Set | [IAM Handwriting Database](https://fki.tic.heia-fr.ch/databases/iam-handwriting-database) IAM database is a widely used, available handwritten English text online. The database contains forms of unconstrained handwritten text, which were scanned at a resolution of 300dpi and saved as PNG images with 256 gray levels. The figure below provides samples of a complete form, a text line and some extracted words. |
+| Testing Set | Women's travel diaries / IAM database |
+| Accuracy w/ symspell algorithm |CER:  5, WER:  15 (estimation)  |
+| Accuracy w symspell algorithm | CER:  5, WER:  15 (estimation)  |
 
  Strength
- - Easily Trainable [^1], training is based on pages
+ - Easily Trainable [^1], training is based on pages, but has a relatively long training period depend on computational power. 
  - Modular design, usable line segmentation tools
  
  
  Weakness
- - Lack maintenance
+ - Lack monthly maintenance, but Kraken developers seem to restart this project recently.
  - require MacOS/linux operating system
- - Long training period
+ - Doesn't provide a complete documentation as tesseract does. We have to develop sample projects from scratch.  
+
  
  
  [^1]: The training Set of all the OCR Engines require highly consistent and legible hand-written documents, which can provide high quality ground-truth files. Joined-up writing documents are relatively harder to train. 
@@ -212,7 +214,7 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
 ### Data & Accuracy
 
 | Training Set | N/A |
-| Testing Set | Women traveling diaries |
+| Testing Set | Women's travel diaries |
 | Accuracy w/ symspell algorithm | CER:  28.69, WER:  46.77, Levenshtein distance:  80 |
 | Accuracy w symspell algorithm | CER:  31.43, WER:  49.45, Levenshtein distance:  78 |
 
@@ -242,9 +244,10 @@ Amazon Textract is based on the same proven, highly scalable, deep-learning tech
 1. Retrain Kraken/Tesseract using different dataset or using labeled women traveling diaries
 2. Develop new HTR models from Transkribus
 3. Explore the viability of developing generalizable HTR models for genres of handwritten documents in the Rubenstein (e.g. 19th century diaries from the same hand vs. 20th century business correspondence from different hands).
-4. Develop better self-designed post OCR correction algorithm 
+4. Develop a better self-designed post OCR correction algorithm using ML. 
 5. Conduct further computational analysis and visualization of HTR-generated text using NLP or other text-mining techniques or methods.
 6. Include yet-to-be digitized materials related to the early history of Duke such as sermons, diaries, and lecture notes of our institution’s first president, Braxton Craven. 
+7. Develop a better, fancier software after accomplishing a high accuracte model.
 
 ------------------------------------------------------------------------------------------------------------------------
 
