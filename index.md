@@ -20,7 +20,7 @@ graph TD;
     C-->D[Evaluation];
     D-->|reselection| B;
     D-->|Accuracy meets the standard| E[Model checkpoint]
-    E--> F[User Interface & Transcription Software];
+    E--> F[User Interface & Transcription Software (available in Github)];
 ```
 
 Initially, we choose five mainstream OCR engines developed by renowned tech companies, which already generate satisfying results on transcribing printed text. Covering most of the transcription industry, these engines are Transkribus, Tesseract (from HP & Google), Kraken, Google Cloud Vision, and Amazon AWS Textract. These engines are relatively mature, leaving space for future development and training. Obviously, there are still a few OCR engines available out in the internet, like Ocular(from University of California, Berkeley), but they have been proved not suitable for this task of written historical text transcription. 
