@@ -112,6 +112,8 @@ The data for kraken in this graph is a mere estimation. We estimate that give an
 Strength
 - extremely high accuracy in cursive hand written text recognition
 - commercial product with mature software available
+- support both printed text(Pylaia engine: Transkribus Print M1 model) and hand written text in all languages (HTR engine: e.g. Transkribus English Handwriting M3). 
+- trainable using labeled pages, the feasibility is still remain to be tested.
 
 Weakness
 - Low generalizability
@@ -121,7 +123,7 @@ Weakness
 
 ### DataSet & Accuracy
 
-| Training Set | [Jeremy Bentham Project](https://www.ucl.ac.uk/bentham-project/) |
+| Training Set for Transkribus English Handwriting M3 | [Jeremy Bentham Project](https://www.ucl.ac.uk/bentham-project/) |
 | Testing Set | Women‘s Travel Diaries | 
 | Accuracy w/ symspell algorithm | CER:  1.84, WER:  5.56, Levenshtein distance:  96 [^2] |
 | Accuracy w symspell algorithm | CER:  7.88, WER:  12.74, Levenshtein distance:  92 |
@@ -225,11 +227,11 @@ Particular Strength:
 
 ### Introduction
 
-Amazon Textract is based on the same proven, highly scalable, deep-learning technology that was developed by Amazon's computer vision scientists to analyze billions of images and videos daily. You don't need any machine learning expertise to use it. Amazon Textract includes simple, easy-to-use APIs that can analyze image files and PDF files. Amazon Textract is always learning from new data, and Amazon is continually adding new features to the service.
+Amazon Textract is based on the same proven, highly scalable, deep-learning technology that was developed by Amazon's computer vision scientists to analyze billions of images and videos daily. Users don't need any machine learning expertise to use it. Amazon Textract includes simple, easy-to-use APIs that can analyze image files and PDF files. Amazon Textract is always learning from new data, and Amazon is continually adding new features to the service. However, Textract is not e externally trainable by any means. 
 
 ### Data & Accuracy
 
-| Training Set | N/A |
+| Training Set | Data from Amazon |
 | Testing Set | Women traveling diaries |
 | Accuracy w symspell algorithm | CER: 19.83, WER: 42.13, Levenshtein distance: 87 |
 
@@ -238,10 +240,11 @@ Amazon Textract is based on the same proven, highly scalable, deep-learning tech
 ## Future Direction
 
 1. Retrain Kraken/Tesseract using different dataset or using labeled women traveling diaries
-2. Explore the viability of developing generalizable HTR models for genres of handwritten documents in the Rubenstein (e.g. 19th century diaries from the same hand vs. 20th century business correspondence from different hands).
-3. Better self-designed post OCR correction algorithm 
-4. Further computational analysis and visualization of HTR-generated text using NLP or other text-mining techniques or methods.
-5. but could also include yet-to-be digitized materials related to the early history of Duke such as sermons, diaries, and lecture notes of our institution’s first president, Braxton Craven. As we approach Duke’s centennial, HTR-generated transcripts of the Craven materials would help support the university’s ongoing investigation into its institutional connection to slavery.
+2. Develop new HTR models from Transkribus
+3. Explore the viability of developing generalizable HTR models for genres of handwritten documents in the Rubenstein (e.g. 19th century diaries from the same hand vs. 20th century business correspondence from different hands).
+4. Develop better self-designed post OCR correction algorithm 
+5. Conduct further computational analysis and visualization of HTR-generated text using NLP or other text-mining techniques or methods.
+6. Include yet-to-be digitized materials related to the early history of Duke such as sermons, diaries, and lecture notes of our institution’s first president, Braxton Craven. 
 
 ------------------------------------------------------------------------------------------------------------------------
 
