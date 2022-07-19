@@ -212,7 +212,9 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
 
 ### Introducton
 
+Google Vision API offers powerful pre-trained machine learning models through REST and RPC APIs. Assign labels to images and quickly classify them into millions of predefined categories. Detect objects and faces, read printed and handwritten text, and build valuable metadata into your image catalog.
 
+<img width="698" alt="Screen Shot 2022-07-19 at 12 17 06" src="https://user-images.githubusercontent.com/84580259/179799586-366a2a87-c5a3-4989-88d0-768d37e14622.png">
 
 ### Data & Accuracy
 
@@ -223,7 +225,8 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
 
 
 
-Particular Strength: 
+Particular Strength in line/word segmentation: 
+
 
 ![WechatIMG222](https://user-images.githubusercontent.com/84580259/177836913-c5b19c26-26e4-44b3-9a50-da14b7dbf0e9.png)
 
