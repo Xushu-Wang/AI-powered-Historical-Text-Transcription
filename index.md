@@ -23,7 +23,7 @@ graph TD;
     E--> F[User Interface & Transcription Software];
 ```
 
-Initially, we choose five mainstream OCR engines developed by renowned tech companies, which already generate satisfying results on transcribing printed text. Covering most of the transcription industry, these engines are Transkribus, Tesseract (from HP & Google), Kraken, Google Cloud Vision, and Amazon AWS Textract. These engines are relatively mature, leaving space for future development and training. There are many more OCR engines available, such as Ocular(from University of California, Berkeley), but they are not as suitable for the task of handwritten historical text transcription. 
+Initially, we choose five mainstream OCR engines developed by renowned tech companies, which already generate satisfying results on transcribing printed text. Covering most of the transcription industry, these engines are Transkribus, Tesseract (from HP & Google), Kraken, Google Cloud Vision, and Amazon AWS Textract. These engines are relatively mature, leaving space for future development and training. There are many more OCR engines available, such as Ocular (from University of California, Berkeley), but they are not as suitable for the task of handwritten historical text transcription. 
 
 ## Pre-processing
 
@@ -101,7 +101,7 @@ ble sppelingmsitakes                        rrible spelling mistakes
 
 ![OCR](https://user-images.githubusercontent.com/84580259/177837481-d8675497-ad59-47af-9b46-f11ffc47f40e.png)
 
-The data for kraken in this graph is a mere estimation. We estimate that give an approprite training set, Kraken can reach an accuracy of 85%. Sampling Kraken projects can be found online. 
+The data for kraken in this graph is a mere estimation. We estimate that given an approprite training set, Kraken can reach an accuracy of 85%. Sample kraken projects can be found online. 
 
  
 ## Transkribus
@@ -113,7 +113,7 @@ The data for kraken in this graph is a mere estimation. We estimate that give an
 Strengths:
 - Extremely high accuracy in cursive handwritten text recognition
 - Commercial product with mature software available
-- Supports both printed text(Pylaia engine: Transkribus Print M1 model) and handwritten text in all languages (HTR engine: e.g. Transkribus English Handwriting M3). 
+- Supports both printed text (Pylaia engine: Transkribus Print M1 model) and handwritten text in all languages (HTR engine: e.g. Transkribus English Handwriting M3)
 - Trainable using labeled pages - the feasibility of this still remains to be tested
 
 Weaknesses:
@@ -145,7 +145,7 @@ Strengths:
 - Extremely high accuracy in recognizing a majority of printed fonts
 - Various line segmentation & recognition modes
 - High generalizability
-- Comes with a python wrapper class called [Pytesseract](https://pypi.org/project/pytesseract/)
+- Comes with a Python wrapper class called [Pytesseract](https://pypi.org/project/pytesseract/)
 - Supports training
 
 Weaknesses:
@@ -232,7 +232,7 @@ Particular Strength:
 
 ### Introduction
 
-Amazon Textract is based on the same proven, highly scalable, deep-learning technology that was developed by Amazon's computer vision scientists to analyze billions of images and videos daily. Users don't need any machine learning expertise to use it. Amazon Textract includes simple, easy-to-use APIs that can analyze image files and PDF files. Amazon Textract is always learning from new data, and Amazon is continually adding new features to the service. However, Textract is not e externally trainable by any means. 
+Amazon Textract is based on the same proven, highly scalable, deep-learning technology that was developed by Amazon's computer vision scientists to analyze billions of images and videos daily. Users don't need any machine learning expertise to use it. Amazon Textract includes simple, easy-to-use APIs that can analyze image files and PDF files. Amazon Textract is always learning from new data, and Amazon is continually adding new features to the service. However, Textract is not externally trainable by any means. 
 
 ### Data & Accuracy
 
@@ -246,11 +246,11 @@ Amazon Textract is based on the same proven, highly scalable, deep-learning tech
 
 1. Retrain Kraken/Tesseract using a different dataset or using labeled women's travel diaries
 2. Develop new HTR models from Transkribus
-3. Explore the viability of developing generalizable HTR models for genres of handwritten documents in the Rubenstein (e.g. 19th century diaries from the same hand vs. 20th century business correspondence from different hands).
-4. Develop a better self-designed post OCR correction algorithm using ML. 
-5. Conduct further computational analysis and visualization of HTR-generated text using NLP or other text-mining techniques or methods.
-6. Include yet-to-be digitized materials related to the early history of Duke such as sermons, diaries, and lecture notes of our institution’s first president, Braxton Craven. 
-7. Develop a better, fancier software after accomplishing a high accuracte model.
+3. Explore the viability of developing generalizable HTR models for genres of handwritten documents in the Rubenstein (e.g. 19th century diaries from the same hand vs. 20th century business correspondence from different hands)
+4. Develop a better self-designed post OCR correction algorithm using ML
+5. Conduct further computational analysis and visualization of HTR-generated text using NLP or other text-mining techniques or methods
+6. Include yet-to-be digitized materials related to the early history of Duke such as sermons, diaries, and lecture notes of our institution’s first president, Braxton Craven
+7. Develop a better, fancier software after acquiring a highly accuracte model
 
 ------------------------------------------------------------------------------------------------------------------------
 
