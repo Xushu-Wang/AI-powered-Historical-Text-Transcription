@@ -2,11 +2,11 @@
 
 ## Introduction
 
-David M. Rubenstein Rare Book and Manuscript Library at Duke University holds millions of pages of handwritten documents ranging from ancient Papyri to records of Southern plantations to 21st century letters and diaries. Only a small subset of these documents have been digitized and made available online, and even fewer have been transcribed. The lack of text transcripts for handwritten documents impairs discovery and use of the materials, and prohibits any kind of computational text analysis that might support new avenues of research, including research related to the histories of racial injustice.
+The David M. Rubenstein Rare Book and Manuscript Library at Duke University holds millions of pages of handwritten documents ranging from ancient Papyri to records of Southern plantations to 21st century letters and diaries. Only a small subset of these documents have been digitized and made available online, and even fewer have been transcribed. The lack of text transcripts for handwritten documents impairs discovery and use of the materials, and prohibits any kind of computational text analysis that might support new avenues of research, including research related to the histories of racial injustice.
   
   While Optical Character Recognition (OCR) technology has made it possible to derive machine-readable text from typewritten documents in an automated way for several decades, the work of transcribing handwritten documents remains largely manual and labor-intensive. In the last few years, however, platforms like Transkribus have sought to harness the power of machine-learning by using Handwriting Text Recognition (HTR) to extract text from manuscripts and other handwritten documents held in libraries and archives. To date, the Rubenstein Library has conducted a few small-scale HTR experiments with mixed (and mostly disappointing) results. We have a lot to learn about the viability of HTR for our collections and about how to incorporate HTR into our existing workflows.
   
-  In this Data+ project, students will test the viability of AI-powered HTR for transcribing digitized handwritten documents in the Rubenstein library and make recommendations for how the library might incorporate HTR into existing workflows, projects, and interfaces. Source material will be drawn from the Duke Digital Collections and will initially focus on a subset of digitized 19th-20th century [women’s travel diaries](http://repository.duke.edu/dc/womenstraveldiaries). 
+  In this Data+ project, students tested the viability of AI-powered HTR for transcribing digitized handwritten documents in the Rubenstein library and made recommendations for how the library might incorporate HTR into existing workflows, projects, and interfaces. Source material was drawn from the Duke Digital Collections, focusing on a subset of digitized 19th-20th century [women’s travel diaries](http://repository.duke.edu/dc/womenstraveldiaries). 
 
 
 ## Machine-Learning Pipelines
@@ -23,7 +23,7 @@ graph TD;
     E--> F[User Interface & Transcription Software];
 ```
 
-Initially, we choose five mainstream OCR engines developed by renowned tech companies, which already generate satisfying results on transcribing printed text. Covering most of the transcription industry, these engines are Transkribus, Tesseract (from HP & Google), Kraken, Google Cloud Vision, and Amazon AWS Textract. These engines are relatively mature, leaving space for future development and training. Obviously, there are still a few OCR engines available out in the internet, like Ocular(from University of California, Berkeley), but they have been proved not suitable for this task of written historical text transcription. 
+Initially, we choose five mainstream OCR engines developed by renowned tech companies, which already generate satisfying results on transcribing printed text. Covering most of the transcription industry, these engines are Transkribus, Tesseract (from HP & Google), Kraken, Google Cloud Vision, and Amazon AWS Textract. These engines are relatively mature, leaving space for future development and training. There are many more OCR engines available, such as Ocular(from University of California, Berkeley), but they are not as suitable for the task of handwritten historical text transcription. 
 
 ## Pre-processing
 
@@ -51,7 +51,7 @@ def thresholding(image):
 
 ## Symspell Algorithm
 
-SymsSpell is an algorithm used for Post-OCR correction, whose principle is to find all strings in very short time within a fixed edit distance from a large list of strings. SymSpell derives its speed from the Symmetric Delete spelling correction algorithm and keeps its memory requirement in check by prefix indexing. The Symmetric Delete spelling correction algorithm reduces the difficulty of the generation of edit candidates and the dictionary quest for the difference in distance. It is six orders of magnitude faster(than the traditional method with deletes + transposes + substitutes + inserts) and language independent.
+SymsSpell is an algorithm used for Post-OCR correction, whose principle is to find all strings in a very short time within a fixed edit distance from a large list of strings. SymSpell derives its speed from the Symmetric Delete spelling correction algorithm and keeps its memory requirement in check by prefix indexing. The Symmetric Delete spelling correction algorithm reduces the difficulty of generating edit candidates and the dictionary quest for the difference in distance. It is six orders of magnitude faster than the traditional method (deletes + transposes + substitutes + inserts) and is language independent.
 
 
 ```mermaid
@@ -96,7 +96,7 @@ ble sppelingmsitakes                        rrible spelling mistakes
 ```
 
 
-## Five Available OCR Engine
+## OCR Engines
 
 
 ![OCR](https://user-images.githubusercontent.com/84580259/177837481-d8675497-ad59-47af-9b46-f11ffc47f40e.png)
@@ -110,26 +110,26 @@ The data for kraken in this graph is a mere estimation. We estimate that give an
 
   Transkribus is a comprehensive platform for the digitisation, AI-powered text recognition, transcription and searching of historical documents – from any place, any time, and in any language. Visit the official [Transkribus](https://readcoop.eu/transkribus/?sc=Transkribus) website here. 
 
-Strength
-- extremely high accuracy in cursive hand written text recognition
-- commercial product with mature software available
-- support both printed text(Pylaia engine: Transkribus Print M1 model) and hand written text in all languages (HTR engine: e.g. Transkribus English Handwriting M3). 
-- trainable using labeled pages, the feasibility is still remain to be tested.
+Strengths:
+- Extremely high accuracy in cursive handwritten text recognition
+- Commercial product with mature software available
+- Supports both printed text(Pylaia engine: Transkribus Print M1 model) and handwritten text in all languages (HTR engine: e.g. Transkribus English Handwriting M3). 
+- Trainable using labeled pages - the feasibility of this still remains to be tested
 
-Weakness
+Weaknesses:
 - Low generalizability
 - Not open-sourced, not replicable
-- Transkribus requires credits to process large-scale transcription (16€ for 120 credits). 
+- Requires credits to process large-scale transcription (16€ for 120 credits). 
 
 
-### DataSet & Accuracy
+### Dataset & Accuracy
 
-| Training Set for Transkribus English Handwriting M3 | [Jeremy Bentham Project](https://www.ucl.ac.uk/bentham-project/) |
+| Training Set | [Jeremy Bentham Project](https://www.ucl.ac.uk/bentham-project/) |
 | Testing Set | Women‘s Travel Diaries | 
 | Accuracy w/ symspell algorithm | CER:  1.84, WER:  5.56, Levenshtein distance:  96 [^2] |
 | Accuracy w symspell algorithm | CER:  7.88, WER:  12.74, Levenshtein distance:  92 |
 
-[^2]: The current lowest CER produced by the general HTR tool (support more than cursive handwriting) in the industry is around 2.75%.
+[^2]: The current lowest CER produced by the general HTR tool (supports more than cursive handwriting) in the industry is around 2.75%.
 
 
 <img width="1126" alt="Screen Shot 2022-07-05 at 14 01 38" src="https://user-images.githubusercontent.com/84580259/177388447-6ef7c892-b0cc-4aff-b9d0-b43ac78d9b0c.png">
@@ -141,20 +141,20 @@ Weakness
 
   Tesseract was originally developed at Hewlett-Packard Laboratories Bristol and at Hewlett-Packard Co, Greeley Colorado between 1985 and 1994, with some more changes made in 1996 to port to Windows, and some C++izing in 1998. In 2005 Tesseract was open sourced by HP. From 2006 until November 2018 it was developed by Google. Visit [Tesseract](https://github.com/tesseract-ocr/tesseract) repository here.
 
-Strength
+Strengths:
 - Extremely high accuracy in recognizing a majority of printed fonts
-- Various line segmentation & Recognition mode
-- High Generalizability
-- Tesseract comes with a python wrapper class called [Pytesseract](https://pypi.org/project/pytesseract/)
-- Support training
+- Various line segmentation & recognition modes
+- High generalizability
+- Comes with a python wrapper class called [Pytesseract](https://pypi.org/project/pytesseract/)
+- Supports training
 
-Weakness
-- extremely tenuous training process (using shell scripts), nearly inable to train
-- training is based on lines (segemented files paired up with ground-truth)
-- Inable to recognize cursive fonts, accuracy changes correspondent with cursiveness. 
+Weaknesses:
+- Extremely tenuous training process (using shell scripts), nearly untrainable
+- Training is based on lines (segemented files paired with ground-truth)
+- Unable to recognize cursive fonts, accuracy changes correspondent with cursiveness. 
 - Low accuracy in transcribing vowels, especially a & e
 
-### DataSet & Accuracy
+### Dataset & Accuracy
 
 | Training Set | [tessdata_fast & tessdata_best](https://github.com/tesseract-ocr/tessdata) This repository contains the best trained data for the Tesseract Open Source OCR Engine.|
 | Testing Set | Women's Travel Diaries |
@@ -182,26 +182,29 @@ Weakness
 
 kraken is a turn-key OCR system optimized for historical and non-Latin script material.kraken's main features are: Fully trainable layout analysis and character recognition; Right-to-Left, BiDi, and Top-to-Bottom script support; ALTO, PageXML, abbyXML, and hOCR output; Word bounding boxes and character cuts; Multi-script recognition support; Public repository of model files; Lightweight model files; Variable recognition network architectures. Visit the official [Kraken](https://kraken.re/master/index.html) website here. 
 
-### DataSet & Accuracy
-
-| Training Set | [IAM Handwriting Database](https://fki.tic.heia-fr.ch/databases/iam-handwriting-database) IAM database is a widely used, available handwritten English text online. The database contains forms of unconstrained handwritten text, which were scanned at a resolution of 300dpi and saved as PNG images with 256 gray levels. The figure below provides samples of a complete form, a text line and some extracted words. |
-| Testing Set | Women's travel diaries / IAM database |
-| Accuracy w/ symspell algorithm |CER:  5, WER:  15 (estimation)  |
-| Accuracy w symspell algorithm | CER:  5, WER:  15 (estimation)  |
-
- Strength
- - Easily Trainable [^1], training is based on pages, but has a relatively long training period depend on computational power. 
- - Modular design, usable line segmentation tools
+ Strengths:
+ - Easily trainable using shell commands [^1]
+ - Training is based on pages 
+ - Modular design (binarization + segmentation + recognition)
+ - Usable line segmentation tools
  
  
- Weakness
- - Lack monthly maintenance, but Kraken developers seem to restart this project recently.
- - require MacOS/linux operating system
- - Doesn't provide a complete documentation as tesseract does. We have to develop sample projects from scratch.  
+ Weaknesses:
+ - Has a relatively long training period, depending on computational power
+ - Requires MacOS/Linux operating system (not compatible with Windows)
+ - Existing documentation is incomplete 
 
  
  
  [^1]: The training Set of all the OCR Engines require highly consistent and legible hand-written documents, which can provide high quality ground-truth files. Joined-up writing documents are relatively harder to train. 
+
+### Dataset & Accuracy
+
+| Training Set | [IAM Handwriting Database](https://fki.tic.heia-fr.ch/databases/iam-handwriting-database) IAM database is a widely used, available handwritten English text online. The database contains forms of unconstrained handwritten text, which were scanned at a resolution of 300dpi and saved as PNG images with 256 gray levels. The figure below provides samples of a complete form, a text line and some extracted words. |
+| Testing Set | Women's Travel Diaries / IAM database |
+| Accuracy w/ symspell algorithm |CER:  5, WER:  15 (estimation)  |
+| Accuracy w symspell algorithm | CER:  5, WER:  15 (estimation)  |
+
 
 
 
@@ -214,7 +217,7 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
 ### Data & Accuracy
 
 | Training Set | N/A |
-| Testing Set | Women's travel diaries |
+| Testing Set | Women's Travel Diaries |
 | Accuracy w/ symspell algorithm | CER:  28.69, WER:  46.77, Levenshtein distance:  80 |
 | Accuracy w symspell algorithm | CER:  31.43, WER:  49.45, Levenshtein distance:  78 |
 
@@ -234,14 +237,14 @@ Amazon Textract is based on the same proven, highly scalable, deep-learning tech
 ### Data & Accuracy
 
 | Training Set | Data from Amazon |
-| Testing Set | Women traveling diaries |
+| Testing Set | Women's Travel Diaries |
 | Accuracy w symspell algorithm | CER: 19.83, WER: 42.13, Levenshtein distance: 87 |
 
 
 
-## Future Direction
+## Future Directions
 
-1. Retrain Kraken/Tesseract using different dataset or using labeled women traveling diaries
+1. Retrain Kraken/Tesseract using a different dataset or using labeled women's travel diaries
 2. Develop new HTR models from Transkribus
 3. Explore the viability of developing generalizable HTR models for genres of handwritten documents in the Rubenstein (e.g. 19th century diaries from the same hand vs. 20th century business correspondence from different hands).
 4. Develop a better self-designed post OCR correction algorithm using ML. 
