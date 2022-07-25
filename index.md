@@ -243,6 +243,12 @@ Amazon Textract is based on the same proven, highly scalable, deep-learning tech
 | Testing Set | Women's Travel Diaries |
 | Accuracy w symspell algorithm | CER: 19.83, WER: 42.13, Levenshtein distance: 87 |
 
+### Product--User Transcription Tool
+
+An user interface is developed through using Amazon cloud computing services. The user inintially upload a pdf file to Amazon S3, then the first Lambda function will initiate the process and send the input file to the Textract service. The AWS Textract will then send the output (JSON payload) back to another Lambda function which is responsible for cleaning the JSON payload, turning the JSON file to CSV, and storing the output in Amazon S3. A complete tutorial of this tool, sample results, and a demo can be found [here](https://github.com/hj151mids/TextractHandwrittingRecognition)
+
+![180444326-652c8576-4217-4c17-bc5d-5e181a580447](https://user-images.githubusercontent.com/84580259/180820989-d5470c79-658d-42cf-8fa2-b84a3f0f8d53.png)
+
 
 
 ## Future Directions
