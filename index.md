@@ -99,9 +99,8 @@ ble sppelingmsitakes                        rrible spelling mistakes
 ## OCR Engines
 
 
-![OCR](https://user-images.githubusercontent.com/84580259/177837481-d8675497-ad59-47af-9b46-f11ffc47f40e.png)
+![Figure_1](https://user-images.githubusercontent.com/84580259/181312314-b6e58493-2bbe-4184-9a89-11c24380917b.png)
 
-The data for kraken in this graph is a mere estimation. We estimate that given an approprite training set, Kraken can reach an accuracy of 85%. Sample kraken projects can be found online. 
 
  
 ## Transkribus
@@ -202,8 +201,8 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
 
 | Training Set | [IAM Handwriting Database](https://fki.tic.heia-fr.ch/databases/iam-handwriting-database) IAM database is a widely used, available handwritten English text online. The database contains forms of unconstrained handwritten text, which were scanned at a resolution of 300dpi and saved as PNG images with 256 gray levels. The figure below provides samples of a complete form, a text line and some extracted words. |
 | Testing Set | Women's Travel Diaries / IAM database |
-| Accuracy w/ symspell algorithm |CER:  5, WER:  15 (estimation)  |
-| Accuracy w symspell algorithm | CER:  5, WER:  15 (estimation)  |
+| Accuracy w/ symspell algorithm |CER: 7.87, WER: 26.27, Levenshtein distance: 94 |
+| Accuracy w symspell algorithm | CER: 12.54 , WER: 26.88, Levenshtein distance: 89|
 
 
 
