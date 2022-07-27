@@ -23,7 +23,7 @@ root = Tk()
 root.title("GUI for Tesseract 5.1.0")
 
 #place GUI at x=350, y=10
-root.geometry('+%d+%d'%(300,10))
+root.geometry('+%d+%d'%(200,10))
 
 #global variable
 page_content = []
@@ -162,7 +162,7 @@ name = Label(root, text = "Team 4", font = ("Cormorant SC", 20), bg = "white")
 name.grid(column = 1, row = 1)
 
 #add logo
-logo = Image.open("Data-Plus-Logo.png")
+logo = Image.open(r"/Users/andywang/Desktop/AI-powered-Historical-Test-Transcription/Interface_main/Data-Plus-Logo.png")
 logo = logo.resize((204, 96))
 logo = ImageTk.PhotoImage(logo)
 
