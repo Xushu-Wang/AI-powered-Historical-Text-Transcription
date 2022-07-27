@@ -12,8 +12,12 @@ import pkg_resources
 from symspellpy import SymSpell
 
 #kraken
-
-
+from kraken import binarization
+from kraken import blla
+from kraken import serialization
+from kraken.lib import models
+from kraken import rpred
+from kraken import pageseg
 
 
 
@@ -32,18 +36,33 @@ root.geometry('+%d+%d'%(250,10))
 page_content = []
 
     
-#OCR Core
+#Tesseract OCR Core
 def ocr_core(image):
     text = pytesseract.image_to_string(image, config = r"--psm 6", lang='eng')
     return text
 
-#OCR LSTM neural network with tessdata_best
+#Tesseract OCR LSTM neural network with tessdata_best
 def ocr_lstm(image):
     #text = pytesseract.image_to_string(image, config = r"--oem 1 --psm 6", lang='eng')
     #text = pytesseract.image_to_string(image, config = r"--tessdata-dir /Users/andywang/Desktop/tesseract-5.1.0/tessdata/tessdata_fast-main --oem 1 --psm 6 ", lang = 'eng')
 
     text = pytesseract.image_to_string(image, config = r"--tessdata-dir /Users/andywang/Desktop/Data+/tesseract-5.1.0/tessdata/tessdata_best-main --oem 1 --psm 6", lang = 'eng')
     return text
+
+#Kraken OCR
+def kraken(image):
+    bw_im = binarization.nlbin(image)
+    seg = pageseg.segment(bw_im)
+    
+    model = models.load_any('model_eng_cursive.mlmodel')
+    
+    pred_it = rpred.rpred(model, image, seg)
+    result = ""
+    for record in pred_it:
+        result += record
+     
+    return result
+    
 
 #resize image function
 def resize_image(img):
@@ -78,10 +97,14 @@ def open_file():
         
         img = Image.open(file)
         
-        if model_name.get() == "Default Model":
-            content = ocr_core(img)
-        if model_name.get() == "LSTM Model":
-            content = ocr_lstm(pre_processing(np.asarray(img)))
+        if engine_name.get() == "Tesseract":
+            if model_name.get() == "Default Model":
+                content = ocr_core(img)
+            if model_name.get() == "LSTM Model":
+                content = ocr_lstm(pre_processing(np.asarray(img)))
+        
+        if engine_name.get() == "Kraken":
+            content = kraken(img)
         
         result = ""
         
