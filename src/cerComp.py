@@ -16,9 +16,9 @@ N = 5
 
 # Data on X-axis
 
-cer = np.array([28.69, 15, 1.84, 66.09, 19.83])
-wer = np.array([46.77, 20, 5.56, 92.95, 42.13])
-distance = np.array([80, 85, 96, 50, 87])
+cer = np.array([28.69, 7.87, 1.84, 66.09, 19.83])
+wer = np.array([46.77, 26.27, 5.56, 92.95, 42.13])
+distance = np.array([80, 94, 96, 50, 87])
 
 
 # Position of bars on x-axis
