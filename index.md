@@ -204,6 +204,7 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
 | Accuracy w/ symspell algorithm |CER: 7.87, WER: 26.27, Levenshtein distance: 94 |
 | Accuracy w symspell algorithm | CER: 12.54 , WER: 26.88, Levenshtein distance: 89|
 
+![e05a1d40-8a11-488f-9375-141986fd00b6](https://user-images.githubusercontent.com/84580259/181602900-7eb4704e-ba22-4dec-be70-78f3677f132d.jpg)
 
 
 
