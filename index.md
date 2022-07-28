@@ -172,6 +172,9 @@ Weaknesses:
 
 ![tesseract](https://user-images.githubusercontent.com/84580259/177799433-ede7103d-a21f-4b2e-aad3-d18a81e337bd.png)
 
+### Graphical User Interface (GUI)
+
+<img width="1099" alt="Screen Shot 2022-07-28 at 14 14 36" src="https://user-images.githubusercontent.com/84580259/181608659-86f7771b-d81c-4a13-8a7c-515139fcce17.png">
 
 
 
