@@ -256,6 +256,9 @@ There are four major advantages to incorporate cloud computing into our project:
 An user interface is developed through using Amazon cloud computing services. The user inintially upload a pdf file to Amazon S3, then the first Lambda function will initiate the process and send the input file to the Textract service. The AWS Textract will then send the output (JSON payload) back to another Lambda function which is responsible for cleaning the JSON payload, turning the JSON file to CSV, and storing the output in Amazon S3. A complete tutorial of this tool, sample results, and a demo can be found [here](https://github.com/hj151mids/TextractHandwrittingRecognition)
 
 ![180444326-652c8576-4217-4c17-bc5d-5e181a580447](https://user-images.githubusercontent.com/84580259/180820989-d5470c79-658d-42cf-8fa2-b84a3f0f8d53.png)
+![image](https://user-images.githubusercontent.com/90075179/181643837-e25cf7eb-7384-4414-ab43-d458e4eef5f4.png)
+![image](https://user-images.githubusercontent.com/90075179/181643868-dddd6a6f-fe9d-4be9-a946-1b68c772eedd.png)
+![image](https://user-images.githubusercontent.com/90075179/181643893-36fe02bb-167f-47ee-bf20-e5128be6a754.png)
 
 
 
