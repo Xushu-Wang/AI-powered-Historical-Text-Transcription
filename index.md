@@ -125,8 +125,8 @@ Weaknesses:
 
 | Training Set | [Jeremy Bentham Project](https://www.ucl.ac.uk/bentham-project/) |
 | Testing Set | Women‘s Travel Diaries | 
-| Accuracy w/ symspell algorithm | CER:  1.84, WER:  5.56, Levenshtein distance:  96 [^2] |
-| Accuracy w symspell algorithm | CER:  7.88, WER:  12.74, Levenshtein distance:  92 |
+| Accuracy w/ symspell algorithm | CER:  1.84%, WER:  5.56%, Fuzz Ratio (Scaled Levenshtein Distance):  96% [^2] |
+| Accuracy w symspell algorithm | CER:  7.88%, WER:  12.74%, Fuzz Ratio (Scaled Levenshtein Distance):  92% |
 
 [^2]: The current lowest CER produced by the general HTR tool (supports more than cursive handwriting) in the industry is around 2.75%.
 
@@ -163,9 +163,9 @@ Weaknesses:
 | Font type | Author | Accuracy |
 | --------- | ------ | -------- |
 | Non-cursive | N/A  | > 95%, around 96% - 97% accuracy in both characters and words [^3] |
-| Cursive | Crawford, Martha | CER: 68.28, WER: 91.38, Levenshtein distance: 45 |
-| Cursive | McMillan, Mary | CER: 75.74, WER: 98.44, Levenshtein distance: 30(nearly unrecognizable) |
-| Cursive | Harriet, Sanderson | CER: 66.09, WER: 92.95, Levenshtein distance: 50 |
+| Cursive | Crawford, Martha | CER: 68.28%, WER: 91.38%, Fuzz Ratio (Scaled Levenshtein Distance): 45% |
+| Cursive | McMillan, Mary | CER: 75.74%, WER: 98.44%, Fuzz Ratio (Scaled Levenshtein Distance)e: 30%(nearly unrecognizable) |
+| Cursive | Harriet, Sanderson | CER: 66.09%, WER: 92.95%, Fuzz Ratio (Scaled Levenshtein Distance): 50% |
 
 [^3]: The data is released by the official tesseract UNLV testing site. More specific information can be found [here](https://tesseract-ocr.github.io/tessdoc/#testing) 
 
@@ -200,12 +200,12 @@ kraken is a turn-key OCR system optimized for historical and non-Latin script ma
  
  [^1]: The training Set of all the OCR Engines require highly consistent and legible hand-written documents, which can provide high quality ground-truth files. Joined-up writing documents are relatively harder to train. 
 
-### Dataset & Accuracy
+### Dataset & Accuracy (Ideal Metrics If Trained w.t. Enough Data)
 
 | Training Set | [IAM Handwriting Database](https://fki.tic.heia-fr.ch/databases/iam-handwriting-database) IAM database is a widely used, available handwritten English text online. The database contains forms of unconstrained handwritten text, which were scanned at a resolution of 300dpi and saved as PNG images with 256 gray levels. The figure below provides samples of a complete form, a text line and some extracted words. |
 | Testing Set | Women's Travel Diaries / IAM database |
-| Accuracy w/ symspell algorithm |CER: 7.87, WER: 26.27, Levenshtein distance: 94 |
-| Accuracy w symspell algorithm | CER: 12.54 , WER: 26.88, Levenshtein distance: 89|
+| Accuracy w/ symspell algorithm |CER: 7.87%, WER: 26.27%, Fuzz Ratio (Scaled Levenshtein Distance): 94% |
+| Accuracy w symspell algorithm | CER: 12.54% , WER: 26.88%, Fuzz Ratio (Scaled Levenshtein Distance): 89% |
 
 ![e05a1d40-8a11-488f-9375-141986fd00b6](https://user-images.githubusercontent.com/84580259/181602900-7eb4704e-ba22-4dec-be70-78f3677f132d.jpg)
 
@@ -223,8 +223,8 @@ Google Vision API offers powerful pre-trained machine learning models through RE
 
 | Training Set | N/A |
 | Testing Set | Women's Travel Diaries |
-| Accuracy w/ symspell algorithm | CER:  28.69, WER:  46.77, Levenshtein distance:  80 |
-| Accuracy w symspell algorithm | CER:  31.43, WER:  49.45, Levenshtein distance:  78 |
+| Accuracy w/ symspell algorithm | CER:  28.69%, WER:  46.77%, Fuzz Ratio (Scaled Levenshtein Distance):  80% |
+| Accuracy w symspell algorithm | CER:  31.43%, WER:  49.45%, Fuzz Ratio (Scaled Levenshtein Distance):  78% |
 
 
 
@@ -249,7 +249,7 @@ There are four major advantages to incorporate cloud computing into our project:
 
 | Training Set |N/A |
 | Testing Set | Women's Travel Diaries |
-| Accuracy w symspell algorithm | CER: 19.83, WER: 42.13, Levenshtein distance: 87 |
+| Accuracy w symspell algorithm | CER: 19.83%, WER: 42.13%, Fuzz Ratio (Scaled Levenshtein Distance): 87% |
 
 ### Product--User Transcription Tool
 
