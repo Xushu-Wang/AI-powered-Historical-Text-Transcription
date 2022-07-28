@@ -9,4 +9,4 @@ The overview of this program is at https://bigdata.duke.edu/data
 Please check our website for the specific project at
 https://xushu-wang.github.io/AI-powered-Historical-Text-Transcription/
 
-Please check [this repo](https://github.com/hj151mids/TextractHandwrittingRecognition) to learn about how to set up the AWS pipeline.
+Please check [this repo](https://github.com/hj151mids/TextractHandwrittingRecognition) for the instructons to set up the AWS machine learning pipeline.
