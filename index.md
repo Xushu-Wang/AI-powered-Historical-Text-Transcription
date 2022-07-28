@@ -234,7 +234,11 @@ Particular Strength in line/word segmentation:
 
 ### Introduction
 
-Amazon Textract is based on the same proven, highly scalable, deep-learning technology that was developed by Amazon's computer vision scientists to analyze billions of images and videos daily. Users don't need any machine learning expertise to use it. Amazon Textract includes simple, easy-to-use APIs that can analyze image files and PDF files. Amazon Textract is always learning from new data, and Amazon is continually adding new features to the service. However, Textract is not externally trainable by any means. 
+Amazon Textract is based on the same proven, highly scalable, deep-learning technology that was developed by Amazon's computer vision scientists to analyze billions of images and videos daily. Users don't need any machine learning expertise to use it. Amazon Textract includes simple, easy-to-use APIs that can analyze image files and PDF files. Amazon Textract is always learning from new data, and Amazon is continually adding new features to the service. However, Textract is not externally trainable by any means.  
+Structure of the ML pipeline hosted on AWS Textract
+![image](https://user-images.githubusercontent.com/90075179/181577036-fecb4201-b043-49b9-9551-39f8e3602eef.png)
+A pdf file is uploaded to Amazon S3, then the first Lambda function will initiate the process and send the input file to the Textract service. The Textract will then send the output (JSON payload) back to another Lambda function which is responsible for cleaning the JSON payload, turning the JSON file to CSV, and storing the output in Amazon S3.  
+This repository guides you to build an automated tool on Amazon's AWS to fully automate the HTR process.
 
 ### Data & Accuracy
 
