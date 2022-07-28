@@ -162,7 +162,7 @@ name = Label(root, text = "Team 4", font = ("Cormorant SC", 20), bg = "white")
 name.grid(column = 1, row = 1)
 
 #add logo
-logo = Image.open(r"/Users/andywang/Desktop/AI-powered-Historical-Test-Transcription/Interface_main/Data-Plus-Logo.png")
+logo = Image.open(r"/Users/andywang/Desktop/AI-powered-Historical-Test-Transcription/tesseract/Interface_main/Data-Plus-Logo.png")
 logo = logo.resize((204, 96))
 logo = ImageTk.PhotoImage(logo)
 
