@@ -1,6 +1,6 @@
 # AI-powered Historical Text Transcription
 
-Andy Wang, Rees Payne, David Jiang
+Author: Andy Wang, Rees Payne, David Jiang
 
 This is Duke University Data+ 2022 project team 4. 
 
